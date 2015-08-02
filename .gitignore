@@ -1,1 +1,6 @@
 *.zip
+__history/
+*.~*
+*.dsm
+*.rsm
+*.stat
