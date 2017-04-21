@@ -2,7 +2,8 @@ program DelphiVersions;
 
 uses
   Forms,
-  ufrmDelphiVersions in 'ufrmDelphiVersions.pas' {frmDelphiVersions};
+  ufrmDelphiVersions in 'ufrmDelphiVersions.pas' {frmDelphiVersions},
+  uConditionalList in 'uConditionalList.pas';
 
 {$R *.res}
 
