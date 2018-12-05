@@ -22,15 +22,22 @@ type
     pnlBottom: TPanel;
     lblRef1: TLabel;
     lblRef2: TLabel;
-    edtRef1: TEdit;
-    edtRef2: TEdit;
+    edtAboutLink: TEdit;
+    edtClassLink: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    edtDirectivesLink: TEdit;
+    edtVersionsLink: TEdit;
     procedure ToolbarCloseButtonClick(Sender: TObject);
     procedure FormGesture(Sender: TObject;
       const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
       Shift: TShiftState);
     procedure FormActivate(Sender: TObject);
+    procedure edtLinkClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
+    FFirstTime: Boolean;
     FGestureOrigin: TPointF;
     FGestureInProgress: Boolean;
     procedure ShowToolbar(AShow: Boolean);
@@ -42,8 +49,10 @@ var
 implementation
 
 {$R *.fmx}
+{$R *.LgXhdpiPh.fmx ANDROID}
 
 uses
+  ShellAPI,
   uConditionalList;
 
 procedure TfrmDelphiVersionsFM.FormKeyDown(Sender: TObject; var Key: Word;
@@ -63,13 +72,30 @@ begin
   frmDelphiVersionsFM.lbDefines.Items.Add(CompDefined);
 end;
 
+procedure TfrmDelphiVersionsFM.edtLinkClick(Sender: TObject);
+begin
+  ShellExecute(0, 'open', PWideChar((Sender as TEdit).Text), nil, nil, 0);
+end;
+
 procedure TfrmDelphiVersionsFM.FormActivate(Sender: TObject);
 begin
-  lblIntro.Text := IntroText;
-  edtRef1.Text := RefText1;
-  edtRef2.Text := RefText2;
+  if FFirstTime then begin
+    FFirstTime := False;
 
-  GetConditionalDefines(ShowCompilerDefine);
+    GetConditionalDefines(ShowCompilerDefine);
+    SetupReferenceLinks;
+
+    lblIntro.Text := IntroText;
+    edtAboutLink.Text := IntroLink1;
+    edtClassLink.Text := IntroLink2;
+    edtDirectivesLink.Text := DirectivesLink;
+    edtVersionsLink.Text := VersionsLink;
+  end;
+end;
+
+procedure TfrmDelphiVersionsFM.FormCreate(Sender: TObject);
+begin
+  FFirstTime := True;
 end;
 
 procedure TfrmDelphiVersionsFM.FormGesture(Sender: TObject;

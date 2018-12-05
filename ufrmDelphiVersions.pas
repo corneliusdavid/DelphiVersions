@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Vcl.ExtCtrls;
+  Dialogs, StdCtrls, ExtCtrls, Buttons;
 
 type
   TfrmDelphiVersions = class(TForm)
@@ -12,10 +12,22 @@ type
     lbDefs: TListBox;
     pnlBottom: TPanel;
     Label2: TLabel;
-    edtRef1: TEdit;
+    edtAboutLink: TEdit;
     Label3: TLabel;
-    edtRef2: TEdit;
+    edtClassLink: TEdit;
+    btnCopyAboutLink: TSpeedButton;
+    btnCopyClassLink: TSpeedButton;
+    Label1: TLabel;
+    edtDirectivesLink: TEdit;
+    btnCopyDirectivesLink: TSpeedButton;
+    Label4: TLabel;
+    edtVersionsLink: TEdit;
+    btnCopyVersionsLink: TSpeedButton;
     procedure FormActivate(Sender: TObject);
+    procedure btnCopyAboutLinkClick(Sender: TObject);
+    procedure btnCopyClassLinkClick(Sender: TObject);
+    procedure btnCopyDirectivesLinkClick(Sender: TObject);
+    procedure btnCopyVersionsLinkClick(Sender: TObject);
   end;
 
 var
@@ -26,6 +38,7 @@ implementation
 {$R *.dfm}
 
 uses
+  Clipbrd,
   uConditionalList;
 
 procedure ShowCompilerDefine(const CompDefined: string);
@@ -34,13 +47,40 @@ begin
 end;
 
 
+procedure TfrmDelphiVersions.btnCopyAboutLinkClick(Sender: TObject);
+begin
+  Clipboard.AsText := edtAboutLink.Text;
+  ShowMessage('"About" Link copied.');
+end;
+
+procedure TfrmDelphiVersions.btnCopyClassLinkClick(Sender: TObject);
+begin
+  Clipboard.AsText := edtClassLink.Text;
+  ShowMessage('"Classification" Link copied.');
+end;
+
+procedure TfrmDelphiVersions.btnCopyDirectivesLinkClick(Sender: TObject);
+begin
+  Clipboard.AsText := edtDirectivesLink.Text;
+  ShowMessage('"Directives" Link copied.');
+end;
+
+procedure TfrmDelphiVersions.btnCopyVersionsLinkClick(Sender: TObject);
+begin
+  Clipboard.AsText := edtVersionsLink.Text;
+  ShowMessage('"Versions" Link copied.');
+end;
+
 procedure TfrmDelphiVersions.FormActivate(Sender: TObject);
 begin
-  lblIntro.Caption := IntroText;
-  edtRef1.Text := RefText1;
-  edtRef2.Text := RefText2;
-
   GetConditionalDefines(ShowCompilerDefine);
+  SetupReferenceLinks;
+
+  lblIntro.Caption := IntroText;
+  edtAboutLink.Text := IntroLink1;
+  edtClassLink.Text := IntroLink2;
+  edtDirectivesLink.Text := DirectivesLink;
+  edtVersionsLink.Text := VersionsLink;
 end;
 
 end.

@@ -6,6 +6,7 @@ type
   TGetConditionalDefine = procedure(const CompDefined: string);
 
 procedure GetConditionalDefines(GetCondDefProc: TGetConditionalDefine);
+procedure SetupReferenceLinks;
 
 const
   IntroText = 'Delphi has compiler directives that are defined in each version of Delphi that ' +
@@ -14,11 +15,87 @@ const
               'indicate what operating system or CPU architecture it is running on. This ' +
               'program, when compiled in various versions of Delphi show many of these symbols.'  +
               'Try compiling under different versions or platforms to see the differences.';
-  RefText1 = 'http://docwiki.embarcadero.com/RADStudio/Tokyo/en/Compiler_Versions';
-  RefText2 = 'http://docwiki.embarcadero.com/RADStudio/Tokyo/en/Conditional_compilation_(Delphi)';
+
+  // this should always point to the most recent list of compiler version directives
+  VersionsLink = 'http://docwiki.embarcadero.com/RADStudio/Rio/en/Compiler_Versions';
+
+var
+  // these should return links to the documentation for the current version of Delphi
+  IntroLink1: string = '';
+  IntroLink2: string = '';
+  DirectivesLink: string = '';
 
 
 implementation
+
+procedure SetupReferenceLinks;
+const
+  D2010_IntroLink1 = 'http://docwiki.embarcadero.com/RADStudio/2010/en/Conditional_Compilation';
+  D2010_IntroLink2 = 'http://docwiki.embarcadero.com/RADStudio/2010/en/Compiler_directives_for_libraries_or_shared_objects_(Delphi)';
+  D2010_DirectivesList = 'http://docwiki.embarcadero.com/RADStudio/2010/en/Delphi_Compiler_Directives_(List)_Index';
+
+  DXE_IntroLink1 = 'http://docwiki.embarcadero.com/RADStudio/XE/en/Conditional_compilation_(Delphi)';
+  DXE_IntroLink2 = 'http://docwiki.embarcadero.com/RADStudio/XE/en/Delphi_compiler_directives';
+  DXE_DirectivesList = 'http://docwiki.embarcadero.com/RADStudio/XE/en/Delphi_Compiler_Directives_(List)_Index';
+
+  DXE2_IntroLink1 = 'http://docwiki.embarcadero.com/RADStudio/XE2/en/Conditional_compilation_(Delphi)';
+  DXE2_IntroLink2 = 'http://docwiki.embarcadero.com/RADStudio/XE2/en/Delphi_compiler_directives';
+  DXE2_DirectivesList = 'http://docwiki.embarcadero.com/RADStudio/XE2/en/Delphi_Compiler_Directives_(List)_Index';
+
+  DXE3_IntroLink1 = 'http://docwiki.embarcadero.com/RADStudio/XE3/en/Conditional_compilation_(Delphi)';
+  DXE3_IntroLink2 = 'http://docwiki.embarcadero.com/RADStudio/XE3/en/Delphi_compiler_directives';
+  DXE3_DirectivesList = 'http://docwiki.embarcadero.com/RADStudio/XE3/en/Delphi_Compiler_Directives_(List)_Index';
+
+  DXE4_IntroLink1 = 'http://docwiki.embarcadero.com/RADStudio/XE4/en/Conditional_compilation_(Delphi)';
+  DXE4_IntroLink2 = 'http://docwiki.embarcadero.com/RADStudio/XE4/en/Delphi_compiler_directives';
+  DXE4_DirectivesList = 'http://docwiki.embarcadero.com/RADStudio/XE4/en/Delphi_Compiler_Directives_(List)_Index';
+
+  DXE5_IntroLink1 = 'http://docwiki.embarcadero.com/RADStudio/XE5/en/Conditional_compilation_(Delphi)';
+  DXE5_IntroLink2 = 'http://docwiki.embarcadero.com/RADStudio/XE5/en/Delphi_compiler_directives';
+  DXE5_DirectivesList = 'http://docwiki.embarcadero.com/RADStudio/XE5/en/Delphi_Compiler_Directives_(List)_Index';
+
+  DXE6_IntroLink1 = 'http://docwiki.embarcadero.com/RADStudio/XE6/en/Conditional_compilation_(Delphi)';
+  DXE6_IntroLink2 = 'http://docwiki.embarcadero.com/RADStudio/XE6/en/Delphi_compiler_directives';
+  DXE6_DirectivesList = 'http://docwiki.embarcadero.com/RADStudio/XE6/en/Delphi_Compiler_Directives_(List)_Index';
+
+  DXE7_IntroLink1 = 'http://docwiki.embarcadero.com/RADStudio/XE7/en/Conditional_compilation_(Delphi)';
+  DXE7_IntroLink2 = 'http://docwiki.embarcadero.com/RADStudio/XE7/en/Delphi_compiler_directives';
+  DXE7_DirectivesList = 'http://docwiki.embarcadero.com/RADStudio/XE7/en/Delphi_Compiler_Directives_(List)_Index';
+
+  DXE8_IntroLink1 = 'http://docwiki.embarcadero.com/RADStudio/XE8/en/Conditional_compilation_(Delphi)';
+  DXE8_IntroLink2 = 'http://docwiki.embarcadero.com/RADStudio/XE8/en/Delphi_compiler_directives';
+  DXE8_DirectivesList = 'http://docwiki.embarcadero.com/RADStudio/XE8/en/Delphi_Compiler_Directives_(List)_Index';
+
+  D100_IntroLink1 = 'http://docwiki.embarcadero.com/RADStudio/Seattle/en/Conditional_compilation_(Delphi)';
+  D100_IntroLink2 = 'http://docwiki.embarcadero.com/RADStudio/Seattle/en/Delphi_compiler_directives';
+  D100_DirectivesList = 'http://docwiki.embarcadero.com/RADStudio/Seattle/en/Delphi_Compiler_Directives_(List)_Index';
+
+  D101_IntroLink1 = 'http://docwiki.embarcadero.com/RADStudio/Berlin/en/Conditional_compilation_(Delphi)';
+  D101_IntroLink2 = 'http://docwiki.embarcadero.com/RADStudio/Berlin/en/Delphi_compiler_directives';
+  D101_DirectivesList = 'http://docwiki.embarcadero.com/RADStudio/Berlin/en/Delphi_Compiler_Directives_(List)_Index';
+
+  D102_IntroLink1 = 'http://docwiki.embarcadero.com/RADStudio/Tokyo/en/Conditional_compilation_(Delphi)';
+  D102_IntroLink2 = 'http://docwiki.embarcadero.com/RADStudio/Tokyo/en/Delphi_compiler_directives';
+  D102_DirectivesList = 'http://docwiki.embarcadero.com/RADStudio/Tokyo/en/Delphi_Compiler_Directives_(List)_Index';
+
+  D103_IntroLink1 = 'http://docwiki.embarcadero.com/RADStudio/Rio/en/Conditional_compilation_(Delphi)';
+  D103_IntroLink2 = 'http://docwiki.embarcadero.com/RADStudio/Rio/en/Delphi_compiler_directives';
+  D103_DirectivesList = 'http://docwiki.embarcadero.com/RADStudio/Rio/en/Delphi_Compiler_Directives_(List)_Index';
+begin
+  {$IFDEF VER210}   IntroLink1 := D2010_IntroLink1; IntroLink2 := D2010_IntroLink2; DirectivesLink := D2010_DirectivesList; {$ENDIF}
+  {$IFDEF VER220}   IntroLink1 := DXE_IntroLink1; IntroLink2 := DXE_IntroLink2;  DirectivesLink := DXE_DirectivesList; {$ENDIF}
+  {$IFDEF VER230}   IntroLink1 := DXE2_IntroLink1; IntroLink2 := DXE2_IntroLink2; DirectivesLink := DXE2_DirectivesList; {$ENDIF}
+  {$IFDEF VER240}   IntroLink1 := DXE3_IntroLink1; IntroLink2 := DXE3_IntroLink2; DirectivesLink := DXE3_DirectivesList; {$ENDIF}
+  {$IFDEF VER250}   IntroLink1 := DXE4_IntroLink1; IntroLink2 := DXE4_IntroLink2; DirectivesLink := DXE4_DirectivesList; {$ENDIF}
+  {$IFDEF VER260}   IntroLink1 := DXE5_IntroLink1; IntroLink2 := DXE5_IntroLink2; DirectivesLink := DXE5_DirectivesList; {$ENDIF}
+  {$IFDEF VER270}   IntroLink1 := DXE6_IntroLink1; IntroLink2 := DXE6_IntroLink2; DirectivesLink := DXE6_DirectivesList; {$ENDIF}
+  {$IFDEF VER280}   IntroLink1 := DXE7_IntroLink1; IntroLink2 := DXE7_IntroLink2; DirectivesLink := DXE7_DirectivesList; {$ENDIF}
+  {$IFDEF VER290}   IntroLink1 := DXE8_IntroLink1; IntroLink2 := DXE8_IntroLink2; DirectivesLink := DXE8_DirectivesList; {$ENDIF}
+  {$IFDEF VER300}   IntroLink1 := D100_IntroLink1; IntroLink2 := D100_IntroLink2; DirectivesLink := D100_DirectivesList; {$ENDIF}
+  {$IFDEF VER310}   IntroLink1 := D101_IntroLink1; IntroLink2 := D101_IntroLink2; DirectivesLink := D101_DirectivesList; {$ENDIF}
+  {$IFDEF VER320}   IntroLink1 := D102_IntroLink1; IntroLink2 := D102_IntroLink2; DirectivesLink := D102_DirectivesList; {$ENDIF}
+  {$IFDEF VER330}   IntroLink1 := D103_IntroLink1; IntroLink2 := D103_IntroLink2; DirectivesLink := D103_DirectivesList; {$ENDIF}
+end;
 
 procedure GetConditionalDefines(GetCondDefProc: TGetConditionalDefine);
 begin
@@ -69,7 +146,6 @@ begin
   {$IFDEF VER160}   GetCondDefProc('VER160: Delphi 8, package version 80');    {$ENDIF}
   {$IFDEF VER170}   GetCondDefProc('VER170: Delphi 2005 (ver 9), package version 90'); {$ENDIF}
   {$IFDEF VER180}   GetCondDefProc('VER180: Delphi 2006 (ver 10), package version 100'); {$ENDIF}
-  {$IFDEF VER180}   GetCondDefProc('VER180: Delphi 2007 (ver 11), package version 100'); {$ENDIF}
   {$IFDEF VER185}   GetCondDefProc('VER185: Delphi 2007 (ver 11), package version 110'); {$ENDIF}
   {$IFDEF VER200}   GetCondDefProc('VER200: Delphi 2009 (ver 12), package version 120'); {$ENDIF}
   {$IFDEF VER210}   GetCondDefProc('VER210: Delphi 2010 (ver 14), package version 140'); {$ENDIF}
@@ -83,8 +159,8 @@ begin
   {$IFDEF VER290}   GetCondDefProc('VER290: Delphi XE8 (ver 22), package version 220');  {$ENDIF}
   {$IFDEF VER300}   GetCondDefProc('VER300: Delphi 10 Seattle (ver 23), package version 230');  {$ENDIF}
   {$IFDEF VER310}   GetCondDefProc('VER310: Delphi 10.1 Berlin (ver 24), package version 240');  {$ENDIF}
-  {$IFDEF VER310}   GetCondDefProc('VER320: Delphi 10.2 Tokyo (ver 25), package version 250');  {$ENDIF}
-
+  {$IFDEF VER320}   GetCondDefProc('VER320: Delphi 10.2 Tokyo (ver 25), package version 250');  {$ENDIF}
+  {$IFDEF VER330}   GetCondDefProc('VER330: Delphi 10.3 Rio (ver 26), package version 260');  {$ENDIF}
 end;
 
 end.
