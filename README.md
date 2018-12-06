@@ -19,4 +19,4 @@ A Windows FireMonkey app was created looks like this:
 
 Finally, an Android version was added and looks like this:
 
-![](https://corneliusconcepts.tech/sites/default/files/AndroidPhoneZTE.jpg)
+![](https://corneliusconcepts.tech/sites/default/files/AndroidPhone2.jpg)
