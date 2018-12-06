@@ -1,0 +1,74 @@
+object frmDelphiVersionsMobile: TfrmDelphiVersionsMobile
+  Left = 0
+  Top = 0
+  Caption = 'Form8'
+  ClientHeight = 478
+  ClientWidth = 372
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object lblIntro: TLabel
+    Align = Top
+    AutoSize = True
+    Size.Width = 372.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'lblIntro'
+    TabOrder = 0
+  end
+  object pnlBottom: TPanel
+    Align = Bottom
+    Position.Y = 416.000000000000000000
+    Size.Width = 372.000000000000000000
+    Size.Height = 62.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object cmbRefs: TComboBox
+      Align = VertCenter
+      Items.Strings = (
+        'About Conditional Compilation'
+        'Classifications of Directives'
+        'List of Compiler Directives'
+        'All Compiler Version Directives')
+      ItemIndex = 0
+      Margins.Left = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 268.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+    object btnLaunchRef: TButton
+      Align = Right
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 288.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 74.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Launch'
+      OnClick = btnLaunchRefClick
+    end
+  end
+  object lbDefines: TListBox
+    Align = Client
+    Size.Width = 372.000000000000000000
+    Size.Height = 394.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 372.000000000000000000
+    Viewport.Height = 394.000000000000000000
+  end
+end
