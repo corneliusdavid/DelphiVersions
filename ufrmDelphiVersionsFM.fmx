@@ -2,68 +2,88 @@ object frmDelphiVersionsFM: TfrmDelphiVersionsFM
   Left = 0
   Top = 0
   Caption = 'Delphi/FireMonkey Versions'
-  ClientHeight = 595
-  ClientWidth = 640
-  Visible = False
-  OnCreate = FormCreate
+  ClientHeight = 474
+  ClientWidth = 566
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
   OnActivate = FormActivate
+  OnCreate = FormCreate
   OnKeyDown = FormKeyDown
-  StyleBook = StyleBook1
-  StyleLookup = 'backgroundstyle'
-  object StyleBook1: TStyleBook
-    Left = 56
-    Top = 144
-  end
+  DesignerMasterStyle = 0
   object ToolbarHolder: TLayout
-    Position.Point = '(0,512)'
     Locked = True
-    Width = 50.000000000000000000
-    Height = 50.000000000000000000
+    Position.Y = 512.000000000000000000
+    Size.Width = 50.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
     Visible = False
     object ToolbarPopup: TPopup
       DragMode = dmAutomatic
-      Width = 50.000000000000000000
-      Height = 50.000000000000000000
+      PlacementRectangle.Left = -1.000000000000000000
+      PlacementRectangle.Top = -1.000000000000000000
+      PlacementRectangle.Right = -1.000000000000000000
+      PlacementRectangle.Bottom = -1.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
       TabOrder = 0
-      IsOpen = False
-      PlacementRectangle.Rect = '(-1,-1,-1,-1)'
       object ToolbarPopupAnimation: TFloatAnimation
         Duration = 0.200000002980232200
+        PropertyName = 'Position.Y'
+        StartValue = 0.000000000000000000
+        StopValue = 0.000000000000000000
         Trigger = 'IsOpen=true'
         TriggerInverse = 'IsOpen=false'
-        PropertyName = 'Position.Y'
       end
       object ToolBar1: TToolBar
         StyleName = 'StyleBook1'
-        Position.Point = '(50,5)'
-        Width = -50.000000000000000000
-        Height = 40.000000000000000000
-        Padding.Rect = '(50,5,50,0)'
+        Padding.Left = 50.000000000000000000
+        Padding.Top = 5.000000000000000000
+        Padding.Right = 50.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
         TabOrder = 0
         object ToolbarApplyButton: TButton
-          Position.Point = '(141,10)'
-          Width = 80.000000000000000000
-          Height = 22.000000000000000000
-          Margins.Rect = '(5,5,5,5)'
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 141.000000000000000000
+          Position.Y = 10.000000000000000000
+          Size.Width = 80.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
           StyleLookup = 'applybuttontext'
           TabOrder = 0
           Text = 'Apply'
         end
         object ToolbarCloseButton: TButton
-          Position.Point = '(505,10)'
-          Width = 80.000000000000000000
-          Height = 22.000000000000000000
-          Margins.Rect = '(5,5,5,5)'
-          OnClick = ToolbarCloseButtonClick
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 505.000000000000000000
+          Position.Y = 10.000000000000000000
+          Size.Width = 80.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
           StyleLookup = 'closebuttontext'
           TabOrder = 1
           Text = 'Close App'
+          OnClick = ToolbarCloseButtonClick
         end
         object ToolbarAddButton: TButton
-          Position.Point = '(55,10)'
-          Width = 80.000000000000000000
-          Height = 22.000000000000000000
-          Margins.Rect = '(5,5,5,5)'
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 55.000000000000000000
+          Position.Y = 10.000000000000000000
+          Size.Width = 80.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
           StyleLookup = 'addbuttontext'
           TabOrder = 2
           Text = 'Add'
@@ -72,89 +92,136 @@ object frmDelphiVersionsFM: TfrmDelphiVersionsFM
     end
   end
   object lblIntro: TLabel
-    Width = 120.000000000000000000
-    Height = 15.000000000000000000
-    TabOrder = 1
+    Align = Top
+    Size.Width = 566.000000000000000000
+    Size.Height = 81.000000000000000000
+    Size.PlatformDefault = False
     Text = 'lblIntro'
+    TabOrder = 1
   end
   object lbDefines: TListBox
-    Width = 100.000000000000000000
-    Height = 100.000000000000000000
+    Align = Client
+    Size.Width = 566.000000000000000000
+    Size.Height = 286.000000000000000000
+    Size.PlatformDefault = False
     TabOrder = 2
     DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 562.000000000000000000
+    Viewport.Height = 282.000000000000000000
   end
   object pnlBottom: TPanel
-    Position.Point = '(0,432)'
-    Width = 120.000000000000000000
-    Height = 100.000000000000000000
+    Align = Bottom
+    Position.Y = 367.000000000000000000
+    Size.Width = 566.000000000000000000
+    Size.Height = 107.000000000000000000
+    Size.PlatformDefault = False
     TabOrder = 3
     object lblRef1: TLabel
-      Position.Point = '(8,14)'
-      Width = 120.000000000000000000
-      Height = 15.000000000000000000
-      TabOrder = 0
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 8.000000000000000000
+      Position.Y = 13.000000000000000000
+      Size.Width = 209.000000000000000000
+      Size.Height = 15.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 14.000000000000000000
       Text = 'About Conditional Compilation:'
+      TabOrder = 0
     end
     object lblRef2: TLabel
-      Position.Point = '(8,52)'
-      Width = 120.000000000000000000
-      Height = 15.000000000000000000
-      TabOrder = 1
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 8.000000000000000000
+      Position.Y = 36.000000000000000000
+      Size.Width = 241.000000000000000000
+      Size.Height = 15.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 14.000000000000000000
       Text = 'Classifications of Compiler Directives:'
+      TabOrder = 1
     end
     object edtAboutLink: TEdit
-      Cursor = crHandPoint
-      Position.Point = '(320,8)'
-      Width = 100.000000000000000000
-      Height = 22.000000000000000000
-      OnClick = edtLinkClick
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Anchors = [akLeft, akTop, akRight]
       TabOrder = 2
-      KeyboardType = vktDefault
-      Password = False
+      Cursor = crHandPoint
+      TextSettings.Font.StyleExt = {04040000000000000004000000}
+      TextSettings.FontColor = claBlue
+      Position.X = 288.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 271.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Size]
+      OnClick = edtLinkClick
     end
     object edtClassLink: TEdit
-      Cursor = crHandPoint
-      Position.Point = '(320,48)'
-      Width = 100.000000000000000000
-      Height = 22.000000000000000000
-      OnClick = edtLinkClick
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Anchors = [akLeft, akTop, akRight]
       TabOrder = 3
-      KeyboardType = vktDefault
-      Password = False
+      Cursor = crHandPoint
+      TextSettings.Font.StyleExt = {04040000000000000004000000}
+      TextSettings.FontColor = claBlue
+      Position.X = 288.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 271.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Size]
+      OnClick = edtLinkClick
     end
     object Label1: TLabel
-      Position.Point = '(8,94)'
-      Width = 120.000000000000000000
-      Height = 15.000000000000000000
-      TabOrder = 4
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 8.000000000000000000
+      Position.Y = 59.000000000000000000
+      Size.Width = 273.000000000000000000
+      Size.Height = 15.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 14.000000000000000000
       Text = 'Compiler Directives for this Delphi version:'
+      TabOrder = 4
     end
     object Label2: TLabel
-      Position.Point = '(8,132)'
-      Width = 120.000000000000000000
-      Height = 15.000000000000000000
-      TabOrder = 5
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 8.000000000000000000
+      Position.Y = 84.000000000000000000
+      Size.Width = 281.000000000000000000
+      Size.Height = 15.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 14.000000000000000000
       Text = 'Compiler Version Directives for all versions:'
+      TabOrder = 5
     end
     object edtDirectivesLink: TEdit
-      Cursor = crHandPoint
-      Position.Point = '(320,88)'
-      Width = 100.000000000000000000
-      Height = 22.000000000000000000
-      OnClick = edtLinkClick
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Anchors = [akLeft, akTop, akRight]
       TabOrder = 6
-      KeyboardType = vktDefault
-      Password = False
+      Cursor = crHandPoint
+      TextSettings.Font.StyleExt = {04040000000000000004000000}
+      TextSettings.FontColor = claBlue
+      Position.X = 288.000000000000000000
+      Position.Y = 56.000000000000000000
+      Size.Width = 271.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Size]
+      OnClick = edtLinkClick
     end
     object edtVersionsLink: TEdit
-      Cursor = crHandPoint
-      Position.Point = '(320,128)'
-      Width = 100.000000000000000000
-      Height = 22.000000000000000000
-      OnClick = edtLinkClick
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Anchors = [akLeft, akTop, akRight]
       TabOrder = 7
-      KeyboardType = vktDefault
-      Password = False
+      Cursor = crHandPoint
+      TextSettings.Font.StyleExt = {04040000000000000004000000}
+      TextSettings.FontColor = claBlue
+      Position.X = 288.000000000000000000
+      Position.Y = 80.000000000000000000
+      Size.Width = 271.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Size]
+      OnClick = edtLinkClick
     end
   end
 end

@@ -9,7 +9,6 @@ uses
 
 type
   TfrmDelphiVersionsFM = class(TForm)
-    StyleBook1: TStyleBook;
     ToolbarHolder: TLayout;
     ToolbarPopup: TPopup;
     ToolbarPopupAnimation: TFloatAnimation;
