@@ -12,6 +12,9 @@
         <Projects Include="DelphiVersionsFM.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="DelphiVersionsMobile.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -47,14 +50,23 @@
     <Target Name="DelphiVersionsFM:Make">
         <MSBuild Projects="DelphiVersionsFM.dproj" Targets="Make"/>
     </Target>
+    <Target Name="DelphiVersionsMobile">
+        <MSBuild Projects="DelphiVersionsMobile.dproj"/>
+    </Target>
+    <Target Name="DelphiVersionsMobile:Clean">
+        <MSBuild Projects="DelphiVersionsMobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiVersionsMobile:Make">
+        <MSBuild Projects="DelphiVersionsMobile.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="DelphiVersions;DelphiVersionsConsole;DelphiVersionsFM"/>
+        <CallTarget Targets="DelphiVersions;DelphiVersionsConsole;DelphiVersionsFM;DelphiVersionsMobile"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="DelphiVersions:Clean;DelphiVersionsConsole:Clean;DelphiVersionsFM:Clean"/>
+        <CallTarget Targets="DelphiVersions:Clean;DelphiVersionsConsole:Clean;DelphiVersionsFM:Clean;DelphiVersionsMobile:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="DelphiVersions:Make;DelphiVersionsConsole:Make;DelphiVersionsFM:Make"/>
+        <CallTarget Targets="DelphiVersions:Make;DelphiVersionsConsole:Make;DelphiVersionsFM:Make;DelphiVersionsMobile:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

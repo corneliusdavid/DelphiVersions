@@ -1,48 +1,72 @@
-﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-		<PropertyGroup>
-			<ProjectGuid>{740E2163-2FD1-46BF-BFC3-76E83E291CD5}</ProjectGuid>
-		</PropertyGroup>
-		<ItemGroup>
-			<Projects Include="DelphiVersionsConsole.dproj">
-				<Dependencies/>
-			</Projects>
-			<Projects Include="DelphiVersions.dproj">
-				<Dependencies/>
-			</Projects>
-		</ItemGroup>
-		<ProjectExtensions>
-			<Borland.Personality>Default.Personality.12</Borland.Personality>
-			<Borland.ProjectType/>
-			<BorlandProject>
-				<Default.Personality/>
-			</BorlandProject>
-		</ProjectExtensions>
-		<Target Name="DelphiVersionsConsole">
-			<MSBuild Projects="DelphiVersionsConsole.dproj"/>
-		</Target>
-		<Target Name="DelphiVersionsConsole:Clean">
-			<MSBuild Targets="Clean" Projects="DelphiVersionsConsole.dproj"/>
-		</Target>
-		<Target Name="DelphiVersionsConsole:Make">
-			<MSBuild Targets="Make" Projects="DelphiVersionsConsole.dproj"/>
-		</Target>
-		<Target Name="DelphiVersions">
-			<MSBuild Projects="DelphiVersions.dproj"/>
-		</Target>
-		<Target Name="DelphiVersions:Clean">
-			<MSBuild Targets="Clean" Projects="DelphiVersions.dproj"/>
-		</Target>
-		<Target Name="DelphiVersions:Make">
-			<MSBuild Targets="Make" Projects="DelphiVersions.dproj"/>
-		</Target>
-		<Target Name="Build">
-			<CallTarget Targets="DelphiVersionsConsole;DelphiVersions"/>
-		</Target>
-		<Target Name="Clean">
-			<CallTarget Targets="DelphiVersionsConsole:Clean;DelphiVersions:Clean"/>
-		</Target>
-		<Target Name="Make">
-			<CallTarget Targets="DelphiVersionsConsole:Make;DelphiVersions:Make"/>
-		</Target>
-		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
-	</Project>
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{740E2163-2FD1-46BF-BFC3-76E83E291CD5}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DelphiVersionsConsole.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DelphiVersions.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DelphiVersionsFM.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DelphiVersionsMobile.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DelphiVersionsConsole">
+        <MSBuild Projects="DelphiVersionsConsole.dproj"/>
+    </Target>
+    <Target Name="DelphiVersionsConsole:Clean">
+        <MSBuild Projects="DelphiVersionsConsole.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiVersionsConsole:Make">
+        <MSBuild Projects="DelphiVersionsConsole.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DelphiVersions">
+        <MSBuild Projects="DelphiVersions.dproj"/>
+    </Target>
+    <Target Name="DelphiVersions:Clean">
+        <MSBuild Projects="DelphiVersions.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiVersions:Make">
+        <MSBuild Projects="DelphiVersions.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DelphiVersionsFM">
+        <MSBuild Projects="DelphiVersionsFM.dproj"/>
+    </Target>
+    <Target Name="DelphiVersionsFM:Clean">
+        <MSBuild Projects="DelphiVersionsFM.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiVersionsFM:Make">
+        <MSBuild Projects="DelphiVersionsFM.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DelphiVersionsMobile">
+        <MSBuild Projects="DelphiVersionsMobile.dproj"/>
+    </Target>
+    <Target Name="DelphiVersionsMobile:Clean">
+        <MSBuild Projects="DelphiVersionsMobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiVersionsMobile:Make">
+        <MSBuild Projects="DelphiVersionsMobile.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DelphiVersionsConsole;DelphiVersions;DelphiVersionsFM;DelphiVersionsMobile"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DelphiVersionsConsole:Clean;DelphiVersions:Clean;DelphiVersionsFM:Clean;DelphiVersionsMobile:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DelphiVersionsConsole:Make;DelphiVersions:Make;DelphiVersionsFM:Make;DelphiVersionsMobile:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
