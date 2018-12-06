@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
-  FMX.ListBox, FMX.StdCtrls, FMX.Controls.Presentation;
+  FMX.ListBox, FMX.StdCtrls, FMX.Controls.Presentation, FMX.Colors;
 
 type
   TfrmDelphiVersionsMobile = class(TForm)
@@ -14,6 +14,8 @@ type
     lbDefines: TListBox;
     cmbRefs: TComboBox;
     btnLaunchRef: TButton;
+    ColorBoxBorder: TColorBox;
+    lblTitle: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnLaunchRefClick(Sender: TObject);

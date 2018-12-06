@@ -2,6 +2,11 @@ inherited frmDelphiVersionsMobile_LgXhdpiPh: TfrmDelphiVersionsMobile_LgXhdpiPh
   ClientHeight = 695
   ClientWidth = 450
   DesignerMasterStyle = 3
+  inherited ColorBoxBorder: TColorBox
+    Opacity = 0.800000011920929000
+    Size.Width = 450.000000000000000000
+    Size.Height = 589.000000000000000000
+  end
   inherited lblIntro: TLabel
     Size.Width = 450.000000000000000000
   end
@@ -16,10 +21,16 @@ inherited frmDelphiVersionsMobile_LgXhdpiPh: TfrmDelphiVersionsMobile_LgXhdpiPh
     end
   end
   inherited lbDefines: TListBox
-    Size.Width = 450.000000000000000000
-    Size.Height = 611.000000000000000000
+    Margins.Left = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Size.Width = 440.000000000000000000
+    Size.Height = 581.000000000000000000
     ItemHeight = 25.000000000000000000
-    Viewport.Width = 450.000000000000000000
-    Viewport.Height = 611.000000000000000000
+    Viewport.Width = 440.000000000000000000
+    Viewport.Height = 581.000000000000000000
+  end
+  inherited lblTitle: TLabel
+    Size.Width = 450.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
   end
 end

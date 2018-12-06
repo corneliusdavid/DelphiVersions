@@ -10,14 +10,24 @@ object frmDelphiVersionsMobile: TfrmDelphiVersionsMobile
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignerMasterStyle = 3
+  object ColorBoxBorder: TColorBox
+    Align = Client
+    Color = claDarkturquoise
+    Opacity = 0.400000005960464500
+    Size.Width = 372.000000000000000000
+    Size.Height = 372.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
   object lblIntro: TLabel
     Align = Top
     AutoSize = True
+    Position.Y = 22.000000000000000000
     Size.Width = 372.000000000000000000
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False
     Text = 'lblIntro'
-    TabOrder = 0
+    TabOrder = 2
   end
   object pnlBottom: TPanel
     Align = Bottom
@@ -25,7 +35,7 @@ object frmDelphiVersionsMobile: TfrmDelphiVersionsMobile
     Size.Width = 372.000000000000000000
     Size.Height = 62.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 3
+    TabOrder = 5
     object cmbRefs: TComboBox
       Align = VertCenter
       Items.Strings = (
@@ -60,15 +70,33 @@ object frmDelphiVersionsMobile: TfrmDelphiVersionsMobile
   end
   object lbDefines: TListBox
     Align = Client
-    Size.Width = 372.000000000000000000
-    Size.Height = 394.000000000000000000
+    Opacity = 0.800000011920929000
+    Margins.Left = 4.000000000000000000
+    Margins.Top = 4.000000000000000000
+    Margins.Right = 4.000000000000000000
+    Margins.Bottom = 4.000000000000000000
+    Size.Width = 364.000000000000000000
+    Size.Height = 364.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 2
+    TabOrder = 4
     DisableFocusEffect = True
     DefaultItemStyles.ItemStyle = ''
     DefaultItemStyles.GroupHeaderStyle = ''
     DefaultItemStyles.GroupFooterStyle = ''
-    Viewport.Width = 372.000000000000000000
-    Viewport.Height = 394.000000000000000000
+    Viewport.Width = 364.000000000000000000
+    Viewport.Height = 364.000000000000000000
+  end
+  object lblTitle: TLabel
+    Align = Top
+    AutoSize = True
+    StyledSettings = [Family, FontColor]
+    Size.Width = 372.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 18.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.HorzAlign = Center
+    Text = 'Delphi Versions'
+    TabOrder = 1
   end
 end
