@@ -15,4 +15,4 @@ There's also a Windows Console app in the group and that one compiled as a 64-bi
 
 Finally, a FireMonkey app was created in Windows and it's default appearance on Windows 8 with a red theme, looks like this:
 
-![](http://blog.corneliusconcepts.com/wp-content/uploads/2017/04/WindowsFiremonkey-64bit.png)
+![](https://corneliusconcepts.tech/sites/default/files/FiremonkeyRio.PNG)
