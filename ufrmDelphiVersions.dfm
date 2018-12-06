@@ -1,26 +1,29 @@
 object frmDelphiVersions: TfrmDelphiVersions
   Left = 118
   Top = 311
-  Width = 735
-  Height = 461
   BorderWidth = 5
   Caption = 'Delphi Versions'
+  ClientHeight = 404
+  ClientWidth = 886
   Color = clBtnFace
-  Constraints.MinWidth = 450
+  Constraints.MinWidth = 563
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -13
+  Font.Height = -16
   Font.Name = 'Verdana'
   Font.Style = []
   OldCreateOrder = False
   OnActivate = FormActivate
   PixelsPerInch = 96
-  TextHeight = 16
+  TextHeight = 18
   object lblIntro: TLabel
     Left = 0
     Top = 0
-    Width = 709
-    Height = 48
+    Width = 886
+    Height = 54
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
     Align = alTop
     Caption = 
       'Delphi has compiler directives that are defined in each version ' +
@@ -29,55 +32,76 @@ object frmDelphiVersions: TfrmDelphiVersions
       ' compiled in various versions of Delphi show which ones are defi' +
       'ned for that version.'
     WordWrap = True
+    ExplicitWidth = 883
   end
   object lbDefs: TListBox
     Left = 0
-    Top = 48
-    Width = 709
-    Height = 240
+    Top = 54
+    Width = 886
+    Height = 195
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Align = alClient
-    ItemHeight = 16
+    ItemHeight = 18
     TabOrder = 0
+    ExplicitWidth = 707
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 288
-    Width = 709
-    Height = 124
+    Top = 249
+    Width = 886
+    Height = 155
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Align = alBottom
     BevelOuter = bvLowered
     TabOrder = 1
+    ExplicitWidth = 707
     object Label2: TLabel
-      Left = 8
-      Top = 10
-      Width = 176
-      Height = 16
+      Left = 10
+      Top = 12
+      Width = 224
+      Height = 19
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
       Caption = 'About Conditional Compilation:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -16
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
     end
     object Label3: TLabel
-      Left = 8
-      Top = 37
-      Width = 214
-      Height = 16
+      Left = 10
+      Top = 46
+      Width = 265
+      Height = 19
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
       Caption = 'Classifications of Compiler Directives:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -16
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
     end
     object btnCopyAboutLink: TSpeedButton
-      Left = 680
-      Top = 8
-      Width = 24
-      Height = 24
+      Left = 850
+      Top = 10
+      Width = 30
+      Height = 30
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Glyph.Data = {
         36030000424D3603000000000000360000002800000010000000100000000100
         18000000000000030000120B0000120B00000000000000000000FF00FFFF00FF
@@ -108,10 +132,14 @@ object frmDelphiVersions: TfrmDelphiVersions
       OnClick = btnCopyAboutLinkClick
     end
     object btnCopyClassLink: TSpeedButton
-      Left = 680
-      Top = 35
-      Width = 24
-      Height = 24
+      Left = 850
+      Top = 44
+      Width = 30
+      Height = 30
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Glyph.Data = {
         36030000424D3603000000000000360000002800000010000000100000000100
         18000000000000030000120B0000120B00000000000000000000FF00FFFF00FF
@@ -142,23 +170,30 @@ object frmDelphiVersions: TfrmDelphiVersions
       OnClick = btnCopyClassLinkClick
     end
     object Label1: TLabel
-      Left = 8
-      Top = 65
-      Width = 243
-      Height = 16
+      Left = 10
+      Top = 81
+      Width = 304
+      Height = 19
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
       Caption = 'Compiler Directives for this Delphi version:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -16
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
     end
     object btnCopyDirectivesLink: TSpeedButton
-      Left = 680
-      Top = 63
-      Width = 24
-      Height = 24
+      Left = 850
+      Top = 79
+      Width = 30
+      Height = 30
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Glyph.Data = {
         36030000424D3603000000000000360000002800000010000000100000000100
         18000000000000030000120B0000120B00000000000000000000FF00FFFF00FF
@@ -189,23 +224,30 @@ object frmDelphiVersions: TfrmDelphiVersions
       OnClick = btnCopyDirectivesLinkClick
     end
     object Label4: TLabel
-      Left = 8
-      Top = 93
-      Width = 250
-      Height = 16
+      Left = 10
+      Top = 116
+      Width = 310
+      Height = 19
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
       Caption = 'Compiler Version Directives for all versions:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -16
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
     end
     object btnCopyVersionsLink: TSpeedButton
-      Left = 680
-      Top = 91
-      Width = 24
-      Height = 24
+      Left = 850
+      Top = 114
+      Width = 30
+      Height = 30
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Glyph.Data = {
         36030000424D3603000000000000360000002800000010000000100000000100
         18000000000000030000120B0000120B00000000000000000000FF00FFFF00FF
@@ -236,13 +278,17 @@ object frmDelphiVersions: TfrmDelphiVersions
       OnClick = btnCopyVersionsLinkClick
     end
     object edtAboutLink: TEdit
-      Left = 264
-      Top = 9
-      Width = 415
-      Height = 22
+      Left = 330
+      Top = 12
+      Width = 519
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -14
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
@@ -253,13 +299,17 @@ object frmDelphiVersions: TfrmDelphiVersions
         's'
     end
     object edtClassLink: TEdit
-      Left = 264
-      Top = 36
-      Width = 415
-      Height = 22
+      Left = 330
+      Top = 46
+      Width = 519
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -14
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
@@ -270,13 +320,17 @@ object frmDelphiVersions: TfrmDelphiVersions
         'ilation_%28Delphi%29'
     end
     object edtDirectivesLink: TEdit
-      Left = 264
-      Top = 64
-      Width = 415
-      Height = 22
+      Left = 330
+      Top = 81
+      Width = 519
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -14
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
@@ -287,13 +341,17 @@ object frmDelphiVersions: TfrmDelphiVersions
         'ilation_%28Delphi%29'
     end
     object edtVersionsLink: TEdit
-      Left = 264
-      Top = 92
-      Width = 415
-      Height = 22
+      Left = 330
+      Top = 116
+      Width = 519
+      Height = 26
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -14
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
