@@ -5,7 +5,7 @@ uses
   FMX.Forms,
   ufrmDelphiVersionsMobile in 'ufrmDelphiVersionsMobile.pas' {frmDelphiVersionsMobile},
   uConditionalList in 'uConditionalList.pas',
-  uOpenURL in 'uOpenURL.pas';
+  uOpenViewUrl in 'uOpenViewUrl.pas';
 
 {$R *.res}
 
