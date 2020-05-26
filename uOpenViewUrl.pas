@@ -1,68 +1,47 @@
 unit uOpenViewUrl;
-{
-  this unit was found here: http://www.fmxexpress.com/launch-a-url-or-document-on-ios-and-android-with-delphi-firemonkey/
+{ from:
+  https://stackoverflow.com/questions/7443264/how-to-open-an-url-with-the-default-browser-with-firemonkey-cross-platform-appli/7453797
+  https://www.developpeur-pascal.fr/p/_2000-ouvrir-un-site-web-dans-le-navigateur-par-defaut-depuis-une-application-firemonkey.html
 }
-
 interface
- 
-// URLEncode is performed on the URL
-// so you need to format it   protocol://path
-function OpenURL(const URL: string; const DisplayError: Boolean = False): Boolean;
- 
-implementation
- 
+
 uses
-  IdURI, SysUtils, Classes, FMX.Dialogs,
-{$IFDEF ANDROID}
-  FMX.Helpers.Android, Androidapi.JNI.GraphicsContentViewText, Androidapi.Helpers,
-  Androidapi.JNI.Net, Androidapi.JNI.JavaTypes;
-{$ELSE}
-{$IFDEF IOS}
-  iOSapi.Foundation, FMX.Helpers.iOS;
-{$ENDIF IOS}
-{$ENDIF ANDROID}
- 
-function OpenURL(const URL: string; const DisplayError: Boolean = False): Boolean;
-{$IFDEF ANDROID}
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
+  {$IF Defined(IOS)}
+  macapi.helpers, iOSapi.Foundation, FMX.helpers.iOS;
+  {$ELSEIF Defined(ANDROID)}
+  Androidapi.JNI.GraphicsContentViewText, Androidapi.JNI.Net, Androidapi.JNI.App, Androidapi.helpers;
+  {$ELSEIF Defined(MACOS) OR Defined(LINUX64)}
+  Posix.Stdlib;
+  {$ELSEIF Defined(MSWINDOWS)}
+  Winapi.ShellAPI, Winapi.Windows;
+  {$ENDIF}
+
+procedure OpenURL(const URL: string);
+
+
+implementation
+
+procedure OpenURL(const URL: string);
+{$IF Defined(ANDROID)}
 var
   Intent: JIntent;
+{$ENDIF}
 begin
-// There may be an issue with the geo: prefix and URLEncode.
-// will need to research
-  Intent := TJIntent.JavaClass.init(TJIntent.JavaClass.ACTION_VIEW,
-    TJnet_Uri.JavaClass.parse(StringToJString(TIdURI.URLEncode(URL))));
-  try
-    SharedActivity.startActivity(Intent);
-    exit(true);
-  except
-    on e: Exception do
-    begin
-      if DisplayError then ShowMessage('Error: ' + e.Message);
-      exit(false);
-    end;
-  end;
+{$IF Defined(ANDROID)}
+  Intent := TJIntent.Create;
+  Intent.setAction(TJIntent.JavaClass.ACTION_VIEW);
+  Intent.setData(StrToJURI(URL));
+  tandroidhelper.Activity.startActivity(Intent);
+  // SharedActivity.startActivity(Intent);
+{$ELSEIF Defined(MSWINDOWS)}
+  ShellExecute(0, 'OPEN', PWideChar(URL), nil, nil, SW_SHOWNORMAL);
+{$ELSEIF Defined(IOS)}
+  SharedApplication.OpenURL(StrToNSUrl(URL));
+{$ELSEIF Defined(MACOS) OR Defined(LINUX64)}
+  _system(PAnsiChar('open ' + AnsiString(URL)));
+{$ENDIF}
 end;
-{$ELSE}
-{$IFDEF IOS}
-var
-  NSU: NSUrl;
-begin
-  // iOS doesn't like spaces, so URL encode is important.
-  NSU := StrToNSUrl(TIdURI.URLEncode(URL));
-  if SharedApplication.canOpenURL(NSU) then
-    exit(SharedApplication.openUrl(NSU))
-  else
-  begin
-    if DisplayError then
-      ShowMessage('Error: Opening "' + URL + '" not supported.');
-    exit(false);
-  end;
-end;
-{$ELSE}
-begin
-  raise Exception.Create('Not supported!');
-end;
-{$ENDIF IOS}
-{$ENDIF ANDROID}
- 
+
 end.
