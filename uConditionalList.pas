@@ -81,6 +81,10 @@ const
   D103_IntroLink1 = 'http://docwiki.embarcadero.com/RADStudio/Rio/en/Conditional_compilation_(Delphi)';
   D103_IntroLink2 = 'http://docwiki.embarcadero.com/RADStudio/Rio/en/Delphi_compiler_directives';
   D103_DirectivesList = 'http://docwiki.embarcadero.com/RADStudio/Rio/en/Delphi_Compiler_Directives_(List)_Index';
+
+  D104_IntroLink1 = 'http://docwiki.embarcadero.com/RADStudio/Sydney/en/Conditional_compilation_(Delphi)';
+  D104_IntroLink2 = 'http://docwiki.embarcadero.com/RADStudio/Sydney/en/Delphi_compiler_directives';
+  D104_DirectivesList = 'http://docwiki.embarcadero.com/RADStudio/Sydney/en/Delphi_Compiler_Directives_(List)_Index';
 begin
   {$IFDEF VER210}   IntroLink1 := D2010_IntroLink1; IntroLink2 := D2010_IntroLink2; DirectivesLink := D2010_DirectivesList; {$ENDIF}
   {$IFDEF VER220}   IntroLink1 := DXE_IntroLink1; IntroLink2 := DXE_IntroLink2;  DirectivesLink := DXE_DirectivesList; {$ENDIF}
@@ -95,6 +99,7 @@ begin
   {$IFDEF VER310}   IntroLink1 := D101_IntroLink1; IntroLink2 := D101_IntroLink2; DirectivesLink := D101_DirectivesList; {$ENDIF}
   {$IFDEF VER320}   IntroLink1 := D102_IntroLink1; IntroLink2 := D102_IntroLink2; DirectivesLink := D102_DirectivesList; {$ENDIF}
   {$IFDEF VER330}   IntroLink1 := D103_IntroLink1; IntroLink2 := D103_IntroLink2; DirectivesLink := D103_DirectivesList; {$ENDIF}
+  {$IFDEF VER340}   IntroLink1 := D104_IntroLink1; IntroLink2 := D103_IntroLink2; DirectivesLink := D103_DirectivesList; {$ENDIF}
 end;
 
 procedure GetConditionalDefines(GetCondDefProc: TGetConditionalDefine);
@@ -107,6 +112,8 @@ begin
   {$IFDEF WIN32}      GetCondDefProc('WIN32');                {$ENDIF}
   {$IFDEF WIN64}      GetCondDefProc('WIN64');                {$ENDIF}
   {$IFDEF IOS}        GetCondDefProc('IOS');                  {$ENDIF}
+  {$IFDEF IOS32}      GetCondDefProc('IOS32');                {$ENDIF}
+  {$IFDEF IOS64}      GetCondDefProc('IOS64');                {$ENDIF}
   {$IFDEF NATIVECODE} GetCondDefProc('NATIVECODE');           {$ENDIF}
   {$IFDEF MACOS}      GetCondDefProc('MACOS');                {$ENDIF}
   {$IFDEF MACOS32}    GetCondDefProc('MACOS32');              {$ENDIF}
@@ -115,6 +122,8 @@ begin
   {$IFDEF POSIX32}    GetCondDefProc('POSIX32');              {$ENDIF}
   {$IFDEF POSIX64}    GetCondDefProc('POSIX64');              {$ENDIF}
   {$IFDEF ANDROID}    GetCondDefProc('ANDROID');              {$ENDIF}
+  {$IFDEF ANDROID32}  GetCondDefProc('ANDROID32');            {$ENDIF}
+  {$IFDEF ANDROID64}  GetCondDefProc('ANDROID64');            {$ENDIF}
 
   // cpu
   {$IFDEF CPU386}     GetCondDefProc('CPU386');               {$ENDIF}
@@ -132,8 +141,21 @@ begin
   {$IFDEF RELEASE}    GetCondDefProc('RELEASE');              {$ENDIF}
   {$IFDEF DEBUG}      GetCondDefProc('DEBUG');                {$ENDIF}
 
-  // other options
-  {$IFDEF CONDITIONALEXPRESSIONS} GetCondDefProc('CONDITIONALEXPRESSIONS'); {$ENDIF}
+  // available options
+  {$IFDEF ALIGN_STACK}             GetCondDefProc('ALIGN_STACK');            {$ENDIF}
+  {$IFDEF ASSEMBLER}               GetCondDefProc('ASSEMBLER');              {$ENDIF}
+  {$IFDEF AUTOREFCOUNT}            GetCondDefProc('AUTOREFCOUNT');           {$ENDIF}
+  {$IFDEF EXTERNALLINKER}          GetCondDefProc('EXTERNALLINKER');         {$ENDIF}
+  {$IFDEF UNICODE}                 GetCondDefProc('UNICODE');                {$ENDIF}
+  {$IFDEF CONDITIONALEXPRESSIONS}  GetCondDefProc('CONDITIONALEXPRESSIONS'); {$ENDIF}
+  {$IFDEF ELF}                     GetCondDefProc('ELF');                    {$ENDIF}
+  {$IFDEF NEXTGEN}                 GetCondDefProc('NEXTGEN');                {$ENDIF}
+  {$IFDEF PC_MAPPED_EXCEPTIONS}    GetCondDefProc('PC_MAPPED_EXCEPTIONS');   {$ENDIF}
+  {$IFDEF PIC}                     GetCondDefProc('PIC');                    {$ENDIF}
+  {$IFDEF UNDERSCOREIMPORTNAME}    GetCondDefProc('UNDERSCOREIMPORTNAME');   {$ENDIF}
+  {$IFDEF WEAKREF}                 GetCondDefProc('WEAKREF');                {$ENDIF}
+  {$IFDEF WEAKINSTREF	}            GetCondDefProc('WEAKINSTREF	');          {$ENDIF}
+  {$IFDEF WEAKINTFREF}             GetCondDefProc('WEAKINTFREF');            {$ENDIF}
 
   // delphi versions
   {$IFDEF VER80}    GetCondDefProc('VER80: Delphi 1');     {$ENDIF}
@@ -161,6 +183,7 @@ begin
   {$IFDEF VER310}   GetCondDefProc('VER310: Delphi 10.1 Berlin (ver 24), package version 240');  {$ENDIF}
   {$IFDEF VER320}   GetCondDefProc('VER320: Delphi 10.2 Tokyo (ver 25), package version 250');  {$ENDIF}
   {$IFDEF VER330}   GetCondDefProc('VER330: Delphi 10.3 Rio (ver 26), package version 260');  {$ENDIF}
+  {$IFDEF VER340}   GetCondDefProc('VER340: Delphi 10.4 Sydney (ver 27), package version 270');  {$ENDIF}
 end;
 
 end.
