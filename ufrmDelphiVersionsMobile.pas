@@ -21,9 +21,6 @@ type
     procedure btnLaunchRefClick(Sender: TObject);
   private
     FFirstTime: Boolean;
-    procedure Launch(const RefURL: string);
-  public
-    { Public declarations }
   end;
 
 var
@@ -35,13 +32,7 @@ implementation
 {$R *.LgXhdpiPh.fmx ANDROID}
 
 uses
-{$IFDEF MSWINDOWS}
-  Winapi.ShellAPI, Winapi.Windows,
-{$ELSE}
-  {$IFDEF POSIX}
-    uOpenViewUrl,
-  {$ENDIF POSIX}
-{$ENDIF}
+  uOpenViewUrl,
   uConditionalList;
 
 procedure ShowCompilerDefine(const CompDefined: string);
@@ -52,10 +43,10 @@ end;
 procedure TfrmDelphiVersionsMobile.btnLaunchRefClick(Sender: TObject);
 begin
   case cmbRefs.ItemIndex of
-    0: Launch(IntroLink1);
-    1: Launch(IntroLink2);
-    2: Launch(DirectivesLink);
-    3: Launch(VersionsLink);
+    0: OpenURL(IntroLink1);
+    1: OpenURL(IntroLink2);
+    2: OpenURL(DirectivesLink);
+    3: OpenURL(VersionsLink);
   end;
 end;
 
@@ -74,16 +65,6 @@ end;
 procedure TfrmDelphiVersionsMobile.FormCreate(Sender: TObject);
 begin
   FFirstTime := True;
-end;
-
-procedure TfrmDelphiVersionsMobile.Launch(const RefURL: string);
-begin
-{$IFDEF MSWINDOWS}
-  ShellExecute(0, 'OPEN', PChar(RefURL), '', '', SW_SHOWNORMAL);
-{$ENDIF MSWINDOWS}
-{$IFDEF POSIX}
-   OpenURL(RefURL);
-{$ENDIF POSIX}
 end;
 
 end.
