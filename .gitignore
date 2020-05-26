@@ -4,3 +4,17 @@ __history/
 *.dsm
 *.rsm
 *.stat
+*.local
+*.tvsconfig
+*.identcache
+*.dcu
+*.xml
+*.exe
+*.swp
+OSX64/
+Win32/
+Win64/
+iOSSimulator/
+Android/
+Android64/
+
