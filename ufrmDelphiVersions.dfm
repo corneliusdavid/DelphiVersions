@@ -3,27 +3,28 @@ object frmDelphiVersions: TfrmDelphiVersions
   Top = 311
   BorderWidth = 5
   Caption = 'Delphi Versions'
-  ClientHeight = 404
-  ClientWidth = 886
+  ClientHeight = 567
+  ClientWidth = 881
   Color = clBtnFace
-  Constraints.MinWidth = 563
+  Constraints.MinHeight = 500
+  Constraints.MinWidth = 875
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16
-  Font.Name = 'Verdana'
+  Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
   OnActivate = FormActivate
   PixelsPerInch = 96
-  TextHeight = 18
+  TextHeight = 19
   object lblIntro: TLabel
     Left = 0
     Top = 0
-    Width = 886
-    Height = 54
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
+    Width = 881
+    Height = 73
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
     Align = alTop
     Caption = 
       'Delphi has compiler directives that are defined in each version ' +
@@ -36,72 +37,67 @@ object frmDelphiVersions: TfrmDelphiVersions
   end
   object lbDefs: TListBox
     Left = 0
-    Top = 54
-    Width = 886
-    Height = 195
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
+    Top = 73
+    Width = 881
+    Height = 319
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     Align = alClient
-    ItemHeight = 18
+    ItemHeight = 19
     TabOrder = 0
-    ExplicitWidth = 707
+    ExplicitTop = 72
+    ExplicitWidth = 883
+    ExplicitHeight = 326
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 249
-    Width = 886
-    Height = 155
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
+    Top = 392
+    Width = 881
+    Height = 175
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     Align = alBottom
     BevelOuter = bvLowered
     TabOrder = 1
-    ExplicitWidth = 707
+    ExplicitTop = 416
+    ExplicitWidth = 883
+    DesignSize = (
+      881
+      175)
     object Label2: TLabel
-      Left = 10
-      Top = 12
+      Left = 13
+      Top = 19
       Width = 224
       Height = 19
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
       Caption = 'About Conditional Compilation:'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -16
-      Font.Name = 'Tahoma'
-      Font.Style = []
-      ParentFont = False
     end
     object Label3: TLabel
-      Left = 10
-      Top = 46
+      Left = 13
+      Top = 59
       Width = 265
       Height = 19
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
       Caption = 'Classifications of Compiler Directives:'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -16
-      Font.Name = 'Tahoma'
-      Font.Style = []
-      ParentFont = False
     end
     object btnCopyAboutLink: TSpeedButton
-      Left = 850
-      Top = 10
-      Width = 30
-      Height = 30
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 836
+      Top = 13
+      Width = 37
+      Height = 37
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
+      Anchors = [akTop, akRight]
       Glyph.Data = {
         36030000424D3603000000000000360000002800000010000000100000000100
         18000000000000030000120B0000120B00000000000000000000FF00FFFF00FF
@@ -130,16 +126,18 @@ object frmDelphiVersions: TfrmDelphiVersions
         FFFF00FFFF00FFFF00FFB88989B88989B88989B88989B88989B88989CD9999FF
         00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
       OnClick = btnCopyAboutLinkClick
+      ExplicitLeft = 838
     end
     object btnCopyClassLink: TSpeedButton
-      Left = 850
-      Top = 44
-      Width = 30
-      Height = 30
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 836
+      Top = 52
+      Width = 37
+      Height = 38
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
+      Anchors = [akTop, akRight]
       Glyph.Data = {
         36030000424D3603000000000000360000002800000010000000100000000100
         18000000000000030000120B0000120B00000000000000000000FF00FFFF00FF
@@ -168,32 +166,28 @@ object frmDelphiVersions: TfrmDelphiVersions
         FFFF00FFFF00FFFF00FFB88989B88989B88989B88989B88989B88989CD9999FF
         00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
       OnClick = btnCopyClassLinkClick
+      ExplicitLeft = 838
     end
     object Label1: TLabel
-      Left = 10
-      Top = 81
+      Left = 13
+      Top = 98
       Width = 304
       Height = 19
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
       Caption = 'Compiler Directives for this Delphi version:'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -16
-      Font.Name = 'Tahoma'
-      Font.Style = []
-      ParentFont = False
     end
     object btnCopyDirectivesLink: TSpeedButton
-      Left = 850
-      Top = 79
-      Width = 30
-      Height = 30
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 836
+      Top = 92
+      Width = 37
+      Height = 37
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
+      Anchors = [akTop, akRight]
       Glyph.Data = {
         36030000424D3603000000000000360000002800000010000000100000000100
         18000000000000030000120B0000120B00000000000000000000FF00FFFF00FF
@@ -222,32 +216,28 @@ object frmDelphiVersions: TfrmDelphiVersions
         FFFF00FFFF00FFFF00FFB88989B88989B88989B88989B88989B88989CD9999FF
         00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
       OnClick = btnCopyDirectivesLinkClick
+      ExplicitLeft = 838
     end
     object Label4: TLabel
-      Left = 10
-      Top = 116
+      Left = 13
+      Top = 137
       Width = 310
       Height = 19
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
       Caption = 'Compiler Version Directives for all versions:'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -16
-      Font.Name = 'Tahoma'
-      Font.Style = []
-      ParentFont = False
     end
     object btnCopyVersionsLink: TSpeedButton
-      Left = 850
-      Top = 114
-      Width = 30
-      Height = 30
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 836
+      Top = 131
+      Width = 37
+      Height = 37
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
+      Anchors = [akTop, akRight]
       Glyph.Data = {
         36030000424D3603000000000000360000002800000010000000100000000100
         18000000000000030000120B0000120B00000000000000000000FF00FFFF00FF
@@ -276,90 +266,75 @@ object frmDelphiVersions: TfrmDelphiVersions
         FFFF00FFFF00FFFF00FFB88989B88989B88989B88989B88989B88989CD9999FF
         00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
       OnClick = btnCopyVersionsLinkClick
+      ExplicitLeft = 838
     end
     object edtAboutLink: TEdit
-      Left = 330
-      Top = 12
-      Width = 519
-      Height = 26
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -14
-      Font.Name = 'Arial'
-      Font.Style = []
-      ParentFont = False
+      Left = 344
+      Top = 16
+      Width = 490
+      Height = 27
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
+      Anchors = [akLeft, akTop, akRight]
       ReadOnly = True
       TabOrder = 0
       Text = 
         'http://docwiki.embarcadero.com/RADStudio/XE8/en/Compiler_Version' +
         's'
+      ExplicitWidth = 492
     end
     object edtClassLink: TEdit
-      Left = 330
-      Top = 46
-      Width = 519
-      Height = 26
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -14
-      Font.Name = 'Arial'
-      Font.Style = []
-      ParentFont = False
+      Left = 344
+      Top = 55
+      Width = 490
+      Height = 27
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
+      Anchors = [akLeft, akTop, akRight]
       ReadOnly = True
       TabOrder = 1
       Text = 
         'http://docwiki.embarcadero.com/RADStudio/XE8/en/Conditional_comp' +
         'ilation_%28Delphi%29'
+      ExplicitWidth = 492
     end
     object edtDirectivesLink: TEdit
-      Left = 330
-      Top = 81
-      Width = 519
-      Height = 26
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -14
-      Font.Name = 'Arial'
-      Font.Style = []
-      ParentFont = False
+      Left = 344
+      Top = 94
+      Width = 490
+      Height = 27
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
+      Anchors = [akLeft, akTop, akRight]
       ReadOnly = True
       TabOrder = 2
       Text = 
         'http://docwiki.embarcadero.com/RADStudio/XE8/en/Conditional_comp' +
         'ilation_%28Delphi%29'
+      ExplicitWidth = 492
     end
     object edtVersionsLink: TEdit
-      Left = 330
-      Top = 116
-      Width = 519
-      Height = 26
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -14
-      Font.Name = 'Arial'
-      Font.Style = []
-      ParentFont = False
+      Left = 344
+      Top = 133
+      Width = 490
+      Height = 27
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
+      Anchors = [akLeft, akTop, akRight]
       ReadOnly = True
       TabOrder = 3
       Text = 
         'http://docwiki.embarcadero.com/RADStudio/XE8/en/Conditional_comp' +
         'ilation_%28Delphi%29'
+      ExplicitWidth = 492
     end
   end
 end

@@ -1,7 +1,7 @@
 object frmDelphiVersionsMobile: TfrmDelphiVersionsMobile
   Left = 0
   Top = 0
-  Caption = 'Form8'
+  Caption = 'Delphi Versions - Mobile'
   ClientHeight = 478
   ClientWidth = 372
   FormFactor.Width = 320
@@ -9,31 +9,32 @@ object frmDelphiVersionsMobile: TfrmDelphiVersionsMobile
   FormFactor.Devices = [Desktop]
   OnActivate = FormActivate
   OnCreate = FormCreate
-  DesignerMasterStyle = 3
+  DesignerMasterStyle = 0
   object ColorBoxBorder: TColorBox
     Align = Client
     Color = claDarkturquoise
     Opacity = 0.400000005960464500
     Size.Width = 372.000000000000000000
-    Size.Height = 372.000000000000000000
+    Size.Height = 410.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
   end
   object lblIntro: TLabel
     Align = Top
     AutoSize = True
-    Position.Y = 22.000000000000000000
+    StyledSettings = [Style, FontColor]
+    Position.Y = 19.000000000000000000
     Size.Width = 372.000000000000000000
-    Size.Height = 22.000000000000000000
+    Size.Height = 14.000000000000000000
     Size.PlatformDefault = False
+    TextSettings.Font.Family = 'Arial'
     Text = 'lblIntro'
-    TabOrder = 2
   end
   object pnlBottom: TPanel
     Align = Bottom
-    Position.Y = 416.000000000000000000
+    Position.Y = 443.000000000000000000
     Size.Width = 372.000000000000000000
-    Size.Height = 62.000000000000000000
+    Size.Height = 35.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 5
     object cmbRefs: TComboBox
@@ -46,22 +47,22 @@ object frmDelphiVersionsMobile: TfrmDelphiVersionsMobile
       ItemIndex = 0
       Margins.Left = 10.000000000000000000
       Position.X = 10.000000000000000000
-      Position.Y = 15.000000000000000000
+      Position.Y = 4.000000000000000000
       Size.Width = 268.000000000000000000
-      Size.Height = 32.000000000000000000
+      Size.Height = 27.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
     end
     object btnLaunchRef: TButton
       Align = Right
       Margins.Left = 10.000000000000000000
-      Margins.Top = 10.000000000000000000
+      Margins.Top = 4.000000000000000000
       Margins.Right = 10.000000000000000000
-      Margins.Bottom = 10.000000000000000000
+      Margins.Bottom = 4.000000000000000000
       Position.X = 288.000000000000000000
-      Position.Y = 10.000000000000000000
+      Position.Y = 4.000000000000000000
       Size.Width = 74.000000000000000000
-      Size.Height = 42.000000000000000000
+      Size.Height = 27.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
       Text = 'Launch'
@@ -72,31 +73,27 @@ object frmDelphiVersionsMobile: TfrmDelphiVersionsMobile
     Align = Client
     Opacity = 0.800000011920929000
     Margins.Left = 4.000000000000000000
-    Margins.Top = 4.000000000000000000
     Margins.Right = 4.000000000000000000
-    Margins.Bottom = 4.000000000000000000
     Size.Width = 364.000000000000000000
-    Size.Height = 364.000000000000000000
+    Size.Height = 410.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 4
     DisableFocusEffect = True
     DefaultItemStyles.ItemStyle = ''
     DefaultItemStyles.GroupHeaderStyle = ''
     DefaultItemStyles.GroupFooterStyle = ''
-    Viewport.Width = 364.000000000000000000
-    Viewport.Height = 364.000000000000000000
+    Viewport.Width = 360.000000000000000000
+    Viewport.Height = 406.000000000000000000
   end
   object lblTitle: TLabel
     Align = Top
     AutoSize = True
     StyledSettings = [Family, FontColor]
     Size.Width = 372.000000000000000000
-    Size.Height = 22.000000000000000000
+    Size.Height = 19.000000000000000000
     Size.PlatformDefault = False
-    TextSettings.Font.Size = 18.000000000000000000
-    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.Font.Size = 14.000000000000000000
     TextSettings.HorzAlign = Center
     Text = 'Delphi Versions'
-    TabOrder = 1
   end
 end

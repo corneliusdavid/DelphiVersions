@@ -4,8 +4,8 @@ interface
 
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.Ani, FMX.Layouts, FMX.Gestures, FMX.Edit, FMX.StdCtrls,
-  FMX.ListBox, FMX.Controls.Presentation;
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.Ani, FMX.Layouts, FMX.Gestures,
+  FMX.Edit, FMX.StdCtrls, FMX.ListBox, FMX.Controls.Presentation;
 
 type
   TfrmDelphiVersionsFM = class(TForm)
@@ -21,10 +21,10 @@ type
     pnlBottom: TPanel;
     lblRef1: TLabel;
     lblRef2: TLabel;
-    edtAboutLink: TEdit;
-    edtClassLink: TEdit;
     Label1: TLabel;
     Label2: TLabel;
+    edtAboutLink: TEdit;
+    edtClassLink: TEdit;
     edtDirectivesLink: TEdit;
     edtVersionsLink: TEdit;
     procedure ToolbarCloseButtonClick(Sender: TObject);
@@ -51,8 +51,7 @@ implementation
 {$R *.LgXhdpiPh.fmx ANDROID}
 
 uses
-  ShellAPI,
-  uConditionalList;
+  uConditionalList, uOpenViewURL;
 
 procedure TfrmDelphiVersionsFM.FormKeyDown(Sender: TObject; var Key: Word;
   var KeyChar: Char; Shift: TShiftState);
@@ -73,7 +72,7 @@ end;
 
 procedure TfrmDelphiVersionsFM.edtLinkClick(Sender: TObject);
 begin
-  ShellExecute(0, 'open', PWideChar((Sender as TEdit).Text), nil, nil, 0);
+  OpenURL((Sender as TEdit).Text);
 end;
 
 procedure TfrmDelphiVersionsFM.FormActivate(Sender: TObject);

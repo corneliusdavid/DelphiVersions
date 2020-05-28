@@ -1,0 +1,10 @@
+inherited frmDelphiVersionsMobile_Macintosh: TfrmDelphiVersionsMobile_Macintosh
+  DesignerMasterStyle = 0
+  inherited lbDefines: TListBox
+    Margins.Top = 2.000000000000000000
+    Margins.Bottom = 2.000000000000000000
+    Size.Height = 408.000000000000000000
+    Viewport.Width = 360.000000000000000000
+    Viewport.Height = 404.000000000000000000
+  end
+end

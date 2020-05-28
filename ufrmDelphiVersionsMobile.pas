@@ -30,6 +30,8 @@ implementation
 
 {$R *.fmx}
 {$R *.LgXhdpiPh.fmx ANDROID}
+{$R *.Surface.fmx MSWINDOWS}
+{$R *.Macintosh.fmx MACOS}
 
 uses
   uOpenViewUrl,

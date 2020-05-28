@@ -2,8 +2,8 @@ object frmDelphiVersionsFM: TfrmDelphiVersionsFM
   Left = 0
   Top = 0
   Caption = 'Delphi/FireMonkey Versions'
-  ClientHeight = 474
-  ClientWidth = 566
+  ClientHeight = 503
+  ClientWidth = 612
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop, iPhone, iPad]
@@ -93,53 +93,68 @@ object frmDelphiVersionsFM: TfrmDelphiVersionsFM
   end
   object lblIntro: TLabel
     Align = Top
-    Size.Width = 566.000000000000000000
-    Size.Height = 81.000000000000000000
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 2.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 2.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 2.000000000000000000
+    Size.Width = 602.000000000000000000
+    Size.Height = 87.000000000000000000
     Size.PlatformDefault = False
     Text = 'lblIntro'
-    TabOrder = 1
   end
   object lbDefines: TListBox
     Align = Client
-    Size.Width = 566.000000000000000000
-    Size.Height = 286.000000000000000000
+    Size.Width = 612.000000000000000000
+    Size.Height = 298.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 2
     DisableFocusEffect = True
     DefaultItemStyles.ItemStyle = ''
     DefaultItemStyles.GroupHeaderStyle = ''
     DefaultItemStyles.GroupFooterStyle = ''
-    Viewport.Width = 562.000000000000000000
-    Viewport.Height = 282.000000000000000000
+    Viewport.Width = 608.000000000000000000
+    Viewport.Height = 294.000000000000000000
   end
   object pnlBottom: TPanel
     Align = Bottom
-    Position.Y = 367.000000000000000000
-    Size.Width = 566.000000000000000000
-    Size.Height = 107.000000000000000000
+    Position.Y = 389.000000000000000000
+    Size.Width = 612.000000000000000000
+    Size.Height = 114.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 3
     object lblRef1: TLabel
-      StyledSettings = [Family, Style, FontColor]
       Position.X = 8.000000000000000000
       Position.Y = 13.000000000000000000
-      Size.Width = 209.000000000000000000
-      Size.Height = 15.000000000000000000
+      Size.Width = 265.000000000000000000
+      Size.Height = 17.000000000000000000
       Size.PlatformDefault = False
-      TextSettings.Font.Size = 14.000000000000000000
       Text = 'About Conditional Compilation:'
-      TabOrder = 0
     end
     object lblRef2: TLabel
-      StyledSettings = [Family, Style, FontColor]
       Position.X = 8.000000000000000000
       Position.Y = 36.000000000000000000
-      Size.Width = 241.000000000000000000
-      Size.Height = 15.000000000000000000
+      Size.Width = 265.000000000000000000
+      Size.Height = 17.000000000000000000
       Size.PlatformDefault = False
-      TextSettings.Font.Size = 14.000000000000000000
       Text = 'Classifications of Compiler Directives:'
-      TabOrder = 1
+    end
+    object Label1: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 59.000000000000000000
+      Size.Width = 265.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Compiler Directives for this Delphi version:'
+    end
+    object Label2: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 84.000000000000000000
+      Size.Width = 265.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Compiler Version Directives for all versions:'
     end
     object edtAboutLink: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -147,13 +162,12 @@ object frmDelphiVersionsFM: TfrmDelphiVersionsFM
       TabOrder = 2
       Cursor = crHandPoint
       TextSettings.Font.StyleExt = {04040000000000000004000000}
-      TextSettings.FontColor = claBlue
-      Position.X = 288.000000000000000000
+      Position.X = 265.000000000000000000
       Position.Y = 8.000000000000000000
-      Size.Width = 271.000000000000000000
+      Size.Width = 332.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
-      StyledSettings = [Family, Size]
+      StyledSettings = [Family, Size, FontColor]
       OnClick = edtLinkClick
     end
     object edtClassLink: TEdit
@@ -162,36 +176,13 @@ object frmDelphiVersionsFM: TfrmDelphiVersionsFM
       TabOrder = 3
       Cursor = crHandPoint
       TextSettings.Font.StyleExt = {04040000000000000004000000}
-      TextSettings.FontColor = claBlue
-      Position.X = 288.000000000000000000
+      Position.X = 265.000000000000000000
       Position.Y = 32.000000000000000000
-      Size.Width = 271.000000000000000000
+      Size.Width = 332.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
-      StyledSettings = [Family, Size]
+      StyledSettings = [Family, Size, FontColor]
       OnClick = edtLinkClick
-    end
-    object Label1: TLabel
-      StyledSettings = [Family, Style, FontColor]
-      Position.X = 8.000000000000000000
-      Position.Y = 59.000000000000000000
-      Size.Width = 273.000000000000000000
-      Size.Height = 15.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.Size = 14.000000000000000000
-      Text = 'Compiler Directives for this Delphi version:'
-      TabOrder = 4
-    end
-    object Label2: TLabel
-      StyledSettings = [Family, Style, FontColor]
-      Position.X = 8.000000000000000000
-      Position.Y = 84.000000000000000000
-      Size.Width = 281.000000000000000000
-      Size.Height = 15.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.Size = 14.000000000000000000
-      Text = 'Compiler Version Directives for all versions:'
-      TabOrder = 5
     end
     object edtDirectivesLink: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -199,13 +190,12 @@ object frmDelphiVersionsFM: TfrmDelphiVersionsFM
       TabOrder = 6
       Cursor = crHandPoint
       TextSettings.Font.StyleExt = {04040000000000000004000000}
-      TextSettings.FontColor = claBlue
-      Position.X = 288.000000000000000000
+      Position.X = 265.000000000000000000
       Position.Y = 56.000000000000000000
-      Size.Width = 271.000000000000000000
+      Size.Width = 332.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
-      StyledSettings = [Family, Size]
+      StyledSettings = [Family, Size, FontColor]
       OnClick = edtLinkClick
     end
     object edtVersionsLink: TEdit
@@ -214,13 +204,12 @@ object frmDelphiVersionsFM: TfrmDelphiVersionsFM
       TabOrder = 7
       Cursor = crHandPoint
       TextSettings.Font.StyleExt = {04040000000000000004000000}
-      TextSettings.FontColor = claBlue
-      Position.X = 288.000000000000000000
+      Position.X = 265.000000000000000000
       Position.Y = 80.000000000000000000
-      Size.Width = 271.000000000000000000
+      Size.Width = 332.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
-      StyledSettings = [Family, Size]
+      StyledSettings = [Family, Size, FontColor]
       OnClick = edtLinkClick
     end
   end

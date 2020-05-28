@@ -5,16 +5,18 @@ inherited frmDelphiVersionsMobile_LgXhdpiPh: TfrmDelphiVersionsMobile_LgXhdpiPh
   inherited ColorBoxBorder: TColorBox
     Opacity = 0.800000011920929000
     Size.Width = 450.000000000000000000
-    Size.Height = 589.000000000000000000
+    Size.Height = 625.000000000000000000
   end
   inherited lblIntro: TLabel
     Size.Width = 450.000000000000000000
   end
   inherited pnlBottom: TPanel
-    Position.Y = 633.000000000000000000
+    Position.Y = 660.000000000000000000
     Size.Width = 450.000000000000000000
     inherited cmbRefs: TComboBox
+      Position.Y = 1.000000000000000000
       Size.Width = 346.000000000000000000
+      Size.Height = 32.000000000000000000
     end
     inherited btnLaunchRef: TButton
       Position.X = 366.000000000000000000
@@ -22,15 +24,16 @@ inherited frmDelphiVersionsMobile_LgXhdpiPh: TfrmDelphiVersionsMobile_LgXhdpiPh
   end
   inherited lbDefines: TListBox
     Margins.Left = 5.000000000000000000
+    Margins.Top = 2.000000000000000000
     Margins.Right = 5.000000000000000000
+    Margins.Bottom = 2.000000000000000000
     Size.Width = 440.000000000000000000
-    Size.Height = 581.000000000000000000
+    Size.Height = 621.000000000000000000
     ItemHeight = 25.000000000000000000
     Viewport.Width = 440.000000000000000000
-    Viewport.Height = 581.000000000000000000
+    Viewport.Height = 621.000000000000000000
   end
   inherited lblTitle: TLabel
     Size.Width = 450.000000000000000000
-    TextSettings.Font.StyleExt = {00070000000000000004000000}
   end
 end
