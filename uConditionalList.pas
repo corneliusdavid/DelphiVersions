@@ -13,7 +13,7 @@ const
               'you can use in your code to determine, at compile-time, what version of Delphi ' +
               'is being used. Additionally, there are other compiler-defined symbols that ' +
               'indicate what operating system or CPU architecture it is running on. This ' +
-              'program, when compiled in various versions of Delphi show many of these symbols.'  +
+              'program, when compiled in various versions of Delphi show many of these symbols. '  +
               'Try compiling under different versions or platforms to see the differences.';
 
   // this should always point to the most recent list of compiler version directives
