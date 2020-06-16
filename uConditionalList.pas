@@ -17,8 +17,10 @@ const
               'Try compiling under different versions or platforms to see the differences.';
 
   // this should always point to the most recent list of compiler version directives
-  VersionsLink = 'http://docwiki.embarcadero.com/RADStudio/Rio/en/Compiler_Versions';
+  VersionsLink = 'http://docwiki.embarcadero.com/RADStudio/Sydney/en/Compiler_Versions';
 
+  // if all else failes, show this link
+  OldDocLink = 'http://docs.embarcadero.com/products/rad_studio';
 var
   // these should return links to the documentation for the current version of Delphi
   IntroLink1: string = '';
