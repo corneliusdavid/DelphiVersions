@@ -2,10 +2,8 @@ program DelphiVersions;
 
 uses
   Forms,
-  ufrmDelphiVersions in 'ufrmDelphiVersions.pas' {frmDelphiVersions},
-  uConditionalList in 'uConditionalList.pas';
-
-{$R *.res}
+  uConditionalList in '..\uConditionalList.pas',
+  ufrmDelphiVersions in '..\ufrmDelphiVersions.pas' {frmDelphiVersions};
 
 begin
   Application.Initialize;
