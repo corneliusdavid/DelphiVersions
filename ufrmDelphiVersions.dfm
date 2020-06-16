@@ -21,7 +21,7 @@ object frmDelphiVersions: TfrmDelphiVersions
     Left = 0
     Top = 0
     Width = 881
-    Height = 73
+    Height = 54
     Margins.Left = 5
     Margins.Top = 5
     Margins.Right = 5
@@ -32,14 +32,20 @@ object frmDelphiVersions: TfrmDelphiVersions
       '-time, what version of Delphi is being used.  This program, when' +
       ' compiled in various versions of Delphi show which ones are defi' +
       'ned for that version.'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     WordWrap = True
-    ExplicitWidth = 883
+    ExplicitWidth = 875
   end
   object lbDefs: TListBox
     Left = 0
-    Top = 73
+    Top = 54
     Width = 881
-    Height = 319
+    Height = 338
     Margins.Left = 5
     Margins.Top = 5
     Margins.Right = 5
@@ -47,9 +53,8 @@ object frmDelphiVersions: TfrmDelphiVersions
     Align = alClient
     ItemHeight = 19
     TabOrder = 0
-    ExplicitTop = 72
-    ExplicitWidth = 883
-    ExplicitHeight = 326
+    ExplicitTop = 58
+    ExplicitHeight = 335
   end
   object pnlBottom: TPanel
     Left = 0
@@ -62,17 +67,21 @@ object frmDelphiVersions: TfrmDelphiVersions
     Margins.Bottom = 5
     Align = alBottom
     BevelOuter = bvLowered
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
-    ExplicitTop = 416
-    ExplicitWidth = 883
     DesignSize = (
       881
       175)
     object Label2: TLabel
       Left = 13
       Top = 19
-      Width = 224
-      Height = 19
+      Width = 194
+      Height = 18
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
@@ -80,9 +89,9 @@ object frmDelphiVersions: TfrmDelphiVersions
     end
     object Label3: TLabel
       Left = 13
-      Top = 59
-      Width = 265
-      Height = 19
+      Top = 58
+      Width = 237
+      Height = 18
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
@@ -90,9 +99,9 @@ object frmDelphiVersions: TfrmDelphiVersions
     end
     object btnCopyAboutLink: TSpeedButton
       Left = 836
-      Top = 13
-      Width = 37
-      Height = 37
+      Top = 15
+      Width = 29
+      Height = 28
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
@@ -126,13 +135,12 @@ object frmDelphiVersions: TfrmDelphiVersions
         FFFF00FFFF00FFFF00FFB88989B88989B88989B88989B88989B88989CD9999FF
         00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
       OnClick = btnCopyAboutLinkClick
-      ExplicitLeft = 838
     end
     object btnCopyClassLink: TSpeedButton
       Left = 836
-      Top = 52
-      Width = 37
-      Height = 38
+      Top = 54
+      Width = 29
+      Height = 28
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
@@ -166,13 +174,12 @@ object frmDelphiVersions: TfrmDelphiVersions
         FFFF00FFFF00FFFF00FFB88989B88989B88989B88989B88989B88989CD9999FF
         00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
       OnClick = btnCopyClassLinkClick
-      ExplicitLeft = 838
     end
     object Label1: TLabel
       Left = 13
-      Top = 98
-      Width = 304
-      Height = 19
+      Top = 97
+      Width = 271
+      Height = 18
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
@@ -180,9 +187,9 @@ object frmDelphiVersions: TfrmDelphiVersions
     end
     object btnCopyDirectivesLink: TSpeedButton
       Left = 836
-      Top = 92
-      Width = 37
-      Height = 37
+      Top = 93
+      Width = 29
+      Height = 28
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
@@ -216,13 +223,12 @@ object frmDelphiVersions: TfrmDelphiVersions
         FFFF00FFFF00FFFF00FFB88989B88989B88989B88989B88989B88989CD9999FF
         00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
       OnClick = btnCopyDirectivesLinkClick
-      ExplicitLeft = 838
     end
     object Label4: TLabel
       Left = 13
-      Top = 137
-      Width = 310
-      Height = 19
+      Top = 136
+      Width = 277
+      Height = 18
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
@@ -230,9 +236,9 @@ object frmDelphiVersions: TfrmDelphiVersions
     end
     object btnCopyVersionsLink: TSpeedButton
       Left = 836
-      Top = 131
-      Width = 37
-      Height = 37
+      Top = 132
+      Width = 29
+      Height = 28
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
@@ -266,13 +272,12 @@ object frmDelphiVersions: TfrmDelphiVersions
         FFFF00FFFF00FFFF00FFB88989B88989B88989B88989B88989B88989CD9999FF
         00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
       OnClick = btnCopyVersionsLinkClick
-      ExplicitLeft = 838
     end
     object edtAboutLink: TEdit
-      Left = 344
+      Left = 300
       Top = 16
-      Width = 490
-      Height = 27
+      Width = 534
+      Height = 26
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
@@ -283,13 +288,12 @@ object frmDelphiVersions: TfrmDelphiVersions
       Text = 
         'http://docwiki.embarcadero.com/RADStudio/XE8/en/Compiler_Version' +
         's'
-      ExplicitWidth = 492
     end
     object edtClassLink: TEdit
-      Left = 344
+      Left = 300
       Top = 55
-      Width = 490
-      Height = 27
+      Width = 534
+      Height = 26
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
@@ -300,13 +304,12 @@ object frmDelphiVersions: TfrmDelphiVersions
       Text = 
         'http://docwiki.embarcadero.com/RADStudio/XE8/en/Conditional_comp' +
         'ilation_%28Delphi%29'
-      ExplicitWidth = 492
     end
     object edtDirectivesLink: TEdit
-      Left = 344
+      Left = 300
       Top = 94
-      Width = 490
-      Height = 27
+      Width = 534
+      Height = 26
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
@@ -317,13 +320,12 @@ object frmDelphiVersions: TfrmDelphiVersions
       Text = 
         'http://docwiki.embarcadero.com/RADStudio/XE8/en/Conditional_comp' +
         'ilation_%28Delphi%29'
-      ExplicitWidth = 492
     end
     object edtVersionsLink: TEdit
-      Left = 344
+      Left = 300
       Top = 133
-      Width = 490
-      Height = 27
+      Width = 534
+      Height = 26
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
@@ -334,7 +336,6 @@ object frmDelphiVersions: TfrmDelphiVersions
       Text = 
         'http://docwiki.embarcadero.com/RADStudio/XE8/en/Conditional_comp' +
         'ilation_%28Delphi%29'
-      ExplicitWidth = 492
     end
   end
 end
