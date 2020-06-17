@@ -1006,11 +1006,19 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
+        <RcCompile Include="DelphiVersionsVCL.rc">
+            <Form>DelphiVersionsVCL.res</Form>
+        </RcCompile>
         <DCCReference Include="..\uConditionalList.pas"/>
         <DCCReference Include="..\ufrmDelphiVersions.pas">
             <Form>frmDelphiVersions</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <RcItem Include="C:\Program Files (x86)\Embarcadero\Studio\21.0\Redist\styles\vcl\CopperDark.vsf">
+            <ContainerId>ResourceItem</ContainerId>
+            <ResourceType>VCLSTYLE</ResourceType>
+            <ResourceId>COPPER</ResourceId>
+        </RcItem>
         <BuildConfiguration Include="Debug">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

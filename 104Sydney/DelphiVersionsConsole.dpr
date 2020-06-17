@@ -2,8 +2,6 @@ program DelphiVersionsConsole;
 
 {$APPTYPE CONSOLE}
 
-{$R *.res}
-
 uses
   SysUtils,
   uConditionalList in '..\uConditionalList.pas';

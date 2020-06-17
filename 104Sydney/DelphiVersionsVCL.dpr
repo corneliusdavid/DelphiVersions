@@ -1,13 +1,13 @@
 program DelphiVersionsVCL;
 
+{$R 'DelphiVersionsVCL.res' 'DelphiVersionsVCL.rc'}
+
 uses
   Forms,
   uConditionalList in '..\uConditionalList.pas',
   ufrmDelphiVersions in '..\ufrmDelphiVersions.pas' {frmDelphiVersions},
   Vcl.Themes,
   Vcl.Styles;
-
-{$R *.res}
 
 begin
   Application.Initialize;
