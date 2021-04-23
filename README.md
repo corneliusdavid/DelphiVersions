@@ -7,11 +7,11 @@ Read this [blog entry](https://corneliusconcepts.tech/programming-delphi-various
 
 For example, if compiled as a standard Win32 application using VCL, it'll show this:
 
-![](https://corneliusconcepts.tech/sites/default/files/Windows10Seattle.PNG)
+![](https://corneliusconcepts.tech/sites/default/files/10SeattleVCL_Win64_DebugSM.png)
 
 There's also a Windows Console app in the group and that one compiled as a 64-bit app will run in the command window and look like this:
 
-![](https://corneliusconcepts.tech/sites/default/files/10SeattleVCL_Win64_DebugSM.png)
+![](https://corneliusconcepts.tech/sites/default/files/XE_ConoleSM.png)
 
 A desktop FireMonkey app was created and looks like this on a Mac:
 
