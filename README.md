@@ -11,11 +11,11 @@ For example, if compiled as a standard Win32 application using VCL, it'll show t
 
 There's also a Windows Console app in the group and that one compiled as a 64-bit app will run in the command window and look like this:
 
-![](https://corneliusconcepts.tech/sites/default/files/ConsoleXE.PNG)
+![](https://corneliusconcepts.tech/sites/default/files/10SeattleVCL_Win64_DebugSM.png)
 
-A Windows FireMonkey app was created looks like this:
+A desktop FireMonkey app was created and looks like this on a Mac:
 
-![](https://corneliusconcepts.tech/sites/default/files/FiremonkeyRio.PNG)
+![](https://corneliusconcepts.tech/sites/default/files/104Sydney-FireMonkey-MacOS64-Debug_0.png)
 
 Finally, an Android version was added and looks like this:
 
