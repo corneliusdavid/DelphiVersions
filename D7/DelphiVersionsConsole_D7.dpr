@@ -2,10 +2,8 @@ program DelphiVersionsConsole;
 
 {$APPTYPE CONSOLE}
 
-{$R *.res}
-
 uses
-  SysUtils, uConditionalList;
+  SysUtils, uConditionalList in '..\uConditionalList.pas';
 
 procedure ShowCompilerDefine(const CompDefined: string);
 begin
