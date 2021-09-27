@@ -3,7 +3,7 @@ object frmDelphiVersionsFM: TfrmDelphiVersionsFM
   Top = 0
   Caption = 'Delphi/FireMonkey Versions'
   ClientHeight = 503
-  ClientWidth = 612
+  ClientWidth = 765
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop, iPhone, iPad]
@@ -99,28 +99,28 @@ object frmDelphiVersionsFM: TfrmDelphiVersionsFM
     Margins.Bottom = 2.000000000000000000
     Position.X = 5.000000000000000000
     Position.Y = 2.000000000000000000
-    Size.Width = 602.000000000000000000
-    Size.Height = 87.000000000000000000
+    Size.Width = 755.000000000000000000
+    Size.Height = 63.000000000000000000
     Size.PlatformDefault = False
     Text = 'lblIntro'
   end
   object lbDefines: TListBox
     Align = Client
-    Size.Width = 612.000000000000000000
-    Size.Height = 298.000000000000000000
+    Size.Width = 765.000000000000000000
+    Size.Height = 322.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 2
     DisableFocusEffect = True
     DefaultItemStyles.ItemStyle = ''
     DefaultItemStyles.GroupHeaderStyle = ''
     DefaultItemStyles.GroupFooterStyle = ''
-    Viewport.Width = 608.000000000000000000
-    Viewport.Height = 294.000000000000000000
+    Viewport.Width = 761.000000000000000000
+    Viewport.Height = 318.000000000000000000
   end
   object pnlBottom: TPanel
     Align = Bottom
     Position.Y = 389.000000000000000000
-    Size.Width = 612.000000000000000000
+    Size.Width = 765.000000000000000000
     Size.Height = 114.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 3
@@ -164,7 +164,7 @@ object frmDelphiVersionsFM: TfrmDelphiVersionsFM
       TextSettings.Font.StyleExt = {04040000000000000004000000}
       Position.X = 265.000000000000000000
       Position.Y = 8.000000000000000000
-      Size.Width = 332.000000000000000000
+      Size.Width = 485.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       StyledSettings = [Family, Size, FontColor]
@@ -178,7 +178,7 @@ object frmDelphiVersionsFM: TfrmDelphiVersionsFM
       TextSettings.Font.StyleExt = {04040000000000000004000000}
       Position.X = 265.000000000000000000
       Position.Y = 32.000000000000000000
-      Size.Width = 332.000000000000000000
+      Size.Width = 485.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       StyledSettings = [Family, Size, FontColor]
@@ -192,7 +192,7 @@ object frmDelphiVersionsFM: TfrmDelphiVersionsFM
       TextSettings.Font.StyleExt = {04040000000000000004000000}
       Position.X = 265.000000000000000000
       Position.Y = 56.000000000000000000
-      Size.Width = 332.000000000000000000
+      Size.Width = 485.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       StyledSettings = [Family, Size, FontColor]
@@ -206,7 +206,7 @@ object frmDelphiVersionsFM: TfrmDelphiVersionsFM
       TextSettings.Font.StyleExt = {04040000000000000004000000}
       Position.X = 265.000000000000000000
       Position.Y = 80.000000000000000000
-      Size.Width = 332.000000000000000000
+      Size.Width = 485.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       StyledSettings = [Family, Size, FontColor]

@@ -3,8 +3,8 @@ object frmDelphiVersions: TfrmDelphiVersions
   Top = 311
   BorderWidth = 5
   Caption = 'Delphi Versions'
-  ClientHeight = 567
-  ClientWidth = 881
+  ClientHeight = 585
+  ClientWidth = 952
   Color = clBtnFace
   Constraints.MinHeight = 500
   Constraints.MinWidth = 875
@@ -13,15 +13,14 @@ object frmDelphiVersions: TfrmDelphiVersions
   Font.Height = -16
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 19
   object lblIntro: TLabel
     Left = 0
     Top = 0
-    Width = 881
-    Height = 54
+    Width = 952
+    Height = 36
     Margins.Left = 5
     Margins.Top = 5
     Margins.Right = 5
@@ -39,13 +38,13 @@ object frmDelphiVersions: TfrmDelphiVersions
     Font.Style = []
     ParentFont = False
     WordWrap = True
-    ExplicitWidth = 875
+    ExplicitWidth = 951
   end
   object lbDefs: TListBox
     Left = 0
-    Top = 54
-    Width = 881
-    Height = 338
+    Top = 36
+    Width = 952
+    Height = 374
     Margins.Left = 5
     Margins.Top = 5
     Margins.Right = 5
@@ -53,13 +52,13 @@ object frmDelphiVersions: TfrmDelphiVersions
     Align = alClient
     ItemHeight = 19
     TabOrder = 0
-    ExplicitTop = 58
-    ExplicitHeight = 335
+    ExplicitWidth = 950
+    ExplicitHeight = 370
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 392
-    Width = 881
+    Top = 410
+    Width = 952
     Height = 175
     Margins.Left = 5
     Margins.Top = 5
@@ -74,8 +73,10 @@ object frmDelphiVersions: TfrmDelphiVersions
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitTop = 406
+    ExplicitWidth = 950
     DesignSize = (
-      881
+      952
       175)
     object Label2: TLabel
       Left = 13
@@ -98,7 +99,7 @@ object frmDelphiVersions: TfrmDelphiVersions
       Caption = 'Classifications of Compiler Directives:'
     end
     object btnCopyAboutLink: TSpeedButton
-      Left = 836
+      Left = 907
       Top = 15
       Width = 29
       Height = 28
@@ -135,9 +136,10 @@ object frmDelphiVersions: TfrmDelphiVersions
         FFFF00FFFF00FFFF00FFB88989B88989B88989B88989B88989B88989CD9999FF
         00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
       OnClick = btnCopyAboutLinkClick
+      ExplicitLeft = 836
     end
     object btnCopyClassLink: TSpeedButton
-      Left = 836
+      Left = 907
       Top = 54
       Width = 29
       Height = 28
@@ -174,6 +176,7 @@ object frmDelphiVersions: TfrmDelphiVersions
         FFFF00FFFF00FFFF00FFB88989B88989B88989B88989B88989B88989CD9999FF
         00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
       OnClick = btnCopyClassLinkClick
+      ExplicitLeft = 836
     end
     object Label1: TLabel
       Left = 13
@@ -186,7 +189,7 @@ object frmDelphiVersions: TfrmDelphiVersions
       Caption = 'Compiler Directives for this Delphi version:'
     end
     object btnCopyDirectivesLink: TSpeedButton
-      Left = 836
+      Left = 907
       Top = 93
       Width = 29
       Height = 28
@@ -223,6 +226,7 @@ object frmDelphiVersions: TfrmDelphiVersions
         FFFF00FFFF00FFFF00FFB88989B88989B88989B88989B88989B88989CD9999FF
         00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
       OnClick = btnCopyDirectivesLinkClick
+      ExplicitLeft = 836
     end
     object Label4: TLabel
       Left = 13
@@ -235,7 +239,7 @@ object frmDelphiVersions: TfrmDelphiVersions
       Caption = 'Compiler Version Directives for all versions:'
     end
     object btnCopyVersionsLink: TSpeedButton
-      Left = 836
+      Left = 907
       Top = 132
       Width = 29
       Height = 28
@@ -272,11 +276,12 @@ object frmDelphiVersions: TfrmDelphiVersions
         FFFF00FFFF00FFFF00FFB88989B88989B88989B88989B88989B88989CD9999FF
         00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
       OnClick = btnCopyVersionsLinkClick
+      ExplicitLeft = 836
     end
     object edtAboutLink: TEdit
       Left = 300
       Top = 16
-      Width = 534
+      Width = 605
       Height = 26
       Margins.Left = 5
       Margins.Top = 5
@@ -288,11 +293,12 @@ object frmDelphiVersions: TfrmDelphiVersions
       Text = 
         'http://docwiki.embarcadero.com/RADStudio/XE8/en/Compiler_Version' +
         's'
+      ExplicitWidth = 603
     end
     object edtClassLink: TEdit
       Left = 300
       Top = 55
-      Width = 534
+      Width = 605
       Height = 26
       Margins.Left = 5
       Margins.Top = 5
@@ -304,11 +310,12 @@ object frmDelphiVersions: TfrmDelphiVersions
       Text = 
         'http://docwiki.embarcadero.com/RADStudio/XE8/en/Conditional_comp' +
         'ilation_%28Delphi%29'
+      ExplicitWidth = 603
     end
     object edtDirectivesLink: TEdit
       Left = 300
       Top = 94
-      Width = 534
+      Width = 605
       Height = 26
       Margins.Left = 5
       Margins.Top = 5
@@ -320,11 +327,12 @@ object frmDelphiVersions: TfrmDelphiVersions
       Text = 
         'http://docwiki.embarcadero.com/RADStudio/XE8/en/Conditional_comp' +
         'ilation_%28Delphi%29'
+      ExplicitWidth = 603
     end
     object edtVersionsLink: TEdit
       Left = 300
       Top = 133
-      Width = 534
+      Width = 605
       Height = 26
       Margins.Left = 5
       Margins.Top = 5
@@ -336,6 +344,7 @@ object frmDelphiVersions: TfrmDelphiVersions
       Text = 
         'http://docwiki.embarcadero.com/RADStudio/XE8/en/Conditional_comp' +
         'ilation_%28Delphi%29'
+      ExplicitWidth = 603
     end
   end
 end

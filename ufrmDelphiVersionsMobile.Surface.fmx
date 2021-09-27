@@ -4,7 +4,7 @@ inherited frmDelphiVersionsMobile_Surface: TfrmDelphiVersionsMobile_Surface
   DesignerMasterStyle = 0
   inherited ColorBoxBorder: TColorBox
     Size.Width = 1080.000000000000000000
-    Size.Height = 1854.000000000000000000
+    Size.Height = 1852.000000000000000000
   end
   inherited lblIntro: TLabel
     Size.Width = 1080.000000000000000000
@@ -23,9 +23,9 @@ inherited frmDelphiVersionsMobile_Surface: TfrmDelphiVersionsMobile_Surface
     Margins.Top = 2.000000000000000000
     Margins.Bottom = 2.000000000000000000
     Size.Width = 1072.000000000000000000
-    Size.Height = 1850.000000000000000000
+    Size.Height = 1848.000000000000000000
     Viewport.Width = 1068.000000000000000000
-    Viewport.Height = 1846.000000000000000000
+    Viewport.Height = 1844.000000000000000000
   end
   inherited lblTitle: TLabel
     Size.Width = 1080.000000000000000000

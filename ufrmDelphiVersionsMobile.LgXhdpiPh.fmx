@@ -5,7 +5,7 @@ inherited frmDelphiVersionsMobile_LgXhdpiPh: TfrmDelphiVersionsMobile_LgXhdpiPh
   inherited ColorBoxBorder: TColorBox
     Opacity = 0.800000011920929000
     Size.Width = 450.000000000000000000
-    Size.Height = 625.000000000000000000
+    Size.Height = 627.000000000000000000
   end
   inherited lblIntro: TLabel
     Size.Width = 450.000000000000000000
@@ -28,10 +28,10 @@ inherited frmDelphiVersionsMobile_LgXhdpiPh: TfrmDelphiVersionsMobile_LgXhdpiPh
     Margins.Right = 5.000000000000000000
     Margins.Bottom = 2.000000000000000000
     Size.Width = 440.000000000000000000
-    Size.Height = 621.000000000000000000
+    Size.Height = 623.000000000000000000
     ItemHeight = 25.000000000000000000
     Viewport.Width = 440.000000000000000000
-    Viewport.Height = 621.000000000000000000
+    Viewport.Height = 623.000000000000000000
   end
   inherited lblTitle: TLabel
     Size.Width = 450.000000000000000000
