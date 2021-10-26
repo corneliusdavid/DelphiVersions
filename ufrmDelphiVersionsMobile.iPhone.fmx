@@ -1,0 +1,33 @@
+inherited frmDelphiVersionsMobile_iPhone: TfrmDelphiVersionsMobile_iPhone
+  ClientHeight = 460
+  ClientWidth = 320
+  DesignerMasterStyle = 3
+  inherited ColorBoxBorder: TColorBox
+    Size.Width = 320.000000000000000000
+    Size.Height = 394.000000000000000000
+  end
+  inherited lblIntro: TLabel
+    Size.Width = 320.000000000000000000
+  end
+  inherited pnlBottom: TPanel
+    Position.Y = 425.000000000000000000
+    Size.Width = 320.000000000000000000
+    inherited cmbRefs: TComboBox
+      Position.Y = 2.000000000000000000
+      Size.Width = 216.000000000000000000
+      Size.Height = 30.000000000000000000
+    end
+    inherited btnLaunchRef: TButton
+      Position.X = 236.000000000000000000
+    end
+  end
+  inherited lbDefines: TListBox
+    Size.Width = 312.000000000000000000
+    Size.Height = 394.000000000000000000
+    Viewport.Width = 312.000000000000000000
+    Viewport.Height = 394.000000000000000000
+  end
+  inherited lblTitle: TLabel
+    Size.Width = 320.000000000000000000
+  end
+end

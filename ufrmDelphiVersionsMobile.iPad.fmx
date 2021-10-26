@@ -1,0 +1,33 @@
+inherited frmDelphiVersionsMobile_iPad: TfrmDelphiVersionsMobile_iPad
+  ClientHeight = 1004
+  ClientWidth = 768
+  DesignerMasterStyle = 3
+  inherited ColorBoxBorder: TColorBox
+    Size.Width = 768.000000000000000000
+    Size.Height = 938.000000000000000000
+  end
+  inherited lblIntro: TLabel
+    Size.Width = 768.000000000000000000
+  end
+  inherited pnlBottom: TPanel
+    Position.Y = 969.000000000000000000
+    Size.Width = 768.000000000000000000
+    inherited cmbRefs: TComboBox
+      Position.Y = 2.000000000000000000
+      Size.Width = 664.000000000000000000
+      Size.Height = 30.000000000000000000
+    end
+    inherited btnLaunchRef: TButton
+      Position.X = 684.000000000000000000
+    end
+  end
+  inherited lbDefines: TListBox
+    Size.Width = 760.000000000000000000
+    Size.Height = 938.000000000000000000
+    Viewport.Width = 760.000000000000000000
+    Viewport.Height = 938.000000000000000000
+  end
+  inherited lblTitle: TLabel
+    Size.Width = 768.000000000000000000
+  end
+end

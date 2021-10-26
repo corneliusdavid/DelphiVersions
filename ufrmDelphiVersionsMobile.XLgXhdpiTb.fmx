@@ -1,0 +1,31 @@
+inherited frmDelphiVersionsMobile_XLgXhdpiTb: TfrmDelphiVersionsMobile_XLgXhdpiTb
+  ClientHeight = 1255
+  ClientWidth = 800
+  DesignerMasterStyle = 3
+  inherited ColorBoxBorder: TColorBox
+    Size.Width = 800.000000000000000000
+    Size.Height = 1189.000000000000000000
+  end
+  inherited lblIntro: TLabel
+    Size.Width = 800.000000000000000000
+  end
+  inherited pnlBottom: TPanel
+    Position.Y = 1220.000000000000000000
+    Size.Width = 800.000000000000000000
+    inherited cmbRefs: TComboBox
+      Size.Width = 696.000000000000000000
+    end
+    inherited btnLaunchRef: TButton
+      Position.X = 716.000000000000000000
+    end
+  end
+  inherited lbDefines: TListBox
+    Size.Width = 792.000000000000000000
+    Size.Height = 1189.000000000000000000
+    Viewport.Width = 792.000000000000000000
+    Viewport.Height = 1189.000000000000000000
+  end
+  inherited lblTitle: TLabel
+    Size.Width = 800.000000000000000000
+  end
+end

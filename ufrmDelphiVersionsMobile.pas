@@ -16,6 +16,7 @@ type
     btnLaunchRef: TButton;
     ColorBoxBorder: TColorBox;
     lblTitle: TLabel;
+    StyleBook: TStyleBook;
     procedure FormCreate(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnLaunchRefClick(Sender: TObject);
@@ -32,6 +33,13 @@ implementation
 {$R *.LgXhdpiPh.fmx ANDROID}
 {$R *.Surface.fmx MSWINDOWS}
 {$R *.Macintosh.fmx MACOS}
+{$R *.LgXhdpiTb.fmx ANDROID}
+{$R *.Windows.fmx MSWINDOWS}
+{$R *.iPad.fmx IOS}
+{$R *.iPhone.fmx IOS}
+{$R *.SmXhdpiPh.fmx ANDROID}
+{$R *.XLgXhdpiTb.fmx ANDROID}
+{$R *.NmXhdpiPh.fmx ANDROID}
 
 uses
   uOpenViewUrl,
