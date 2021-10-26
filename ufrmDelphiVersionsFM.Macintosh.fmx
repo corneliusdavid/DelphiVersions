@@ -1,0 +1,21 @@
+inherited frmDelphiVersionsFM_Macintosh: TfrmDelphiVersionsFM_Macintosh
+  DesignerMasterStyle = 0
+  inherited lbDefines: TListBox
+    Viewport.Width = 761.000000000000000000
+    Viewport.Height = 318.000000000000000000
+  end
+  inherited pnlBottom: TPanel
+    inherited edtAboutLink: TEdit
+      TextSettings.Font.StyleExt = {04040000000000000004000000}
+    end
+    inherited edtClassLink: TEdit
+      TextSettings.Font.StyleExt = {04040000000000000004000000}
+    end
+    inherited edtDirectivesLink: TEdit
+      TextSettings.Font.StyleExt = {04040000000000000004000000}
+    end
+    inherited edtVersionsLink: TEdit
+      TextSettings.Font.StyleExt = {04040000000000000004000000}
+    end
+  end
+end
