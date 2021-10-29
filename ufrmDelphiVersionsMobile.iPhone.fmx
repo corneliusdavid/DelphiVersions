@@ -4,9 +4,10 @@ inherited frmDelphiVersionsMobile_iPhone: TfrmDelphiVersionsMobile_iPhone
   DesignerMasterStyle = 3
   inherited ColorBoxBorder: TColorBox
     Size.Width = 320.000000000000000000
-    Size.Height = 394.000000000000000000
+    Size.Height = 392.000000000000000000
   end
   inherited lblIntro: TLabel
+    Position.Y = 19.000000000000000000
     Size.Width = 320.000000000000000000
   end
   inherited pnlBottom: TPanel
@@ -23,11 +24,12 @@ inherited frmDelphiVersionsMobile_iPhone: TfrmDelphiVersionsMobile_iPhone
   end
   inherited lbDefines: TListBox
     Size.Width = 312.000000000000000000
-    Size.Height = 394.000000000000000000
+    Size.Height = 392.000000000000000000
     Viewport.Width = 312.000000000000000000
-    Viewport.Height = 394.000000000000000000
+    Viewport.Height = 392.000000000000000000
   end
   inherited lblTitle: TLabel
     Size.Width = 320.000000000000000000
+    Size.Height = 19.000000000000000000
   end
 end

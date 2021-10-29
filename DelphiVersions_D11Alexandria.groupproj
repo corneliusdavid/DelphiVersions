@@ -89,10 +89,10 @@
             <Enabled>True</Enabled>
         </BuildGroupProject>
         <BuildGroupProject Include="11Alexandria\DelphiVersionsMobile.dproj">
-            <ProjectGuid>{E8F0F984-940C-4132-88E5-36D90F3CEBEF}</ProjectGuid>
-            <Configurations>Debug</Configurations>
-            <Platforms>Win32;Win64</Platforms>
-            <Enabled>True</Enabled>
+            <ProjectGuid>{0E13DBB1-67D2-4E8A-9130-0BA3E3ACE037}</ProjectGuid>
+            <Configurations>Release</Configurations>
+            <Platforms>Android64</Platforms>
+            <Enabled>False</Enabled>
         </BuildGroupProject>
     </ItemGroup>
     <ItemGroup Condition="'$(BuildGroup)'=='Build for MacOS'">
@@ -115,10 +115,10 @@
             <Enabled>True</Enabled>
         </BuildGroupProject>
         <BuildGroupProject Include="11Alexandria\DelphiVersionsMobile.dproj">
-            <ProjectGuid>{E8F0F984-940C-4132-88E5-36D90F3CEBEF}</ProjectGuid>
-            <Configurations>Debug</Configurations>
-            <Platforms>OSX64</Platforms>
-            <Enabled>True</Enabled>
+            <ProjectGuid>{0E13DBB1-67D2-4E8A-9130-0BA3E3ACE037}</ProjectGuid>
+            <Configurations>Release</Configurations>
+            <Platforms>Android64</Platforms>
+            <Enabled>False</Enabled>
         </BuildGroupProject>
     </ItemGroup>
     <ItemGroup Condition="'$(BuildGroup)'=='Build for Android'">
@@ -141,10 +141,10 @@
             <Enabled>False</Enabled>
         </BuildGroupProject>
         <BuildGroupProject Include="11Alexandria\DelphiVersionsMobile.dproj">
-            <ProjectGuid>{E8F0F984-940C-4132-88E5-36D90F3CEBEF}</ProjectGuid>
-            <Configurations>Debug</Configurations>
-            <Platforms>Android;Android64</Platforms>
-            <Enabled>True</Enabled>
+            <ProjectGuid>{0E13DBB1-67D2-4E8A-9130-0BA3E3ACE037}</ProjectGuid>
+            <Configurations>Release</Configurations>
+            <Platforms>Android64</Platforms>
+            <Enabled>False</Enabled>
         </BuildGroupProject>
     </ItemGroup>
     <ItemGroup Condition="'$(BuildGroup)'=='Build for iOS'">
@@ -167,10 +167,10 @@
             <Enabled>False</Enabled>
         </BuildGroupProject>
         <BuildGroupProject Include="11Alexandria\DelphiVersionsMobile.dproj">
-            <ProjectGuid>{E8F0F984-940C-4132-88E5-36D90F3CEBEF}</ProjectGuid>
-            <Configurations>Debug</Configurations>
-            <Platforms>iOSDevice64</Platforms>
-            <Enabled>True</Enabled>
+            <ProjectGuid>{0E13DBB1-67D2-4E8A-9130-0BA3E3ACE037}</ProjectGuid>
+            <Configurations>Release</Configurations>
+            <Platforms>Android64</Platforms>
+            <Enabled>False</Enabled>
         </BuildGroupProject>
     </ItemGroup>
 </Project>

@@ -1,11 +1,20 @@
 inherited frmDelphiVersionsMobile_Macintosh: TfrmDelphiVersionsMobile_Macintosh
   DesignerMasterStyle = 0
+  inherited ColorBoxBorder: TColorBox
+    Size.Height = 410.000000000000000000
+  end
+  inherited lblIntro: TLabel
+    Position.Y = 19.000000000000000000
+  end
   inherited lbDefines: TListBox
     Margins.Top = 2.000000000000000000
     Margins.Bottom = 2.000000000000000000
-    Size.Height = 408.000000000000000000
+    Size.Height = 406.000000000000000000
     Viewport.Width = 360.000000000000000000
     Viewport.Height = 402.000000000000000000
+  end
+  inherited lblTitle: TLabel
+    Size.Height = 19.000000000000000000
   end
   inherited StyleBook: TStyleBook
     Styles = <

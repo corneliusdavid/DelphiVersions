@@ -12,7 +12,7 @@
         <Projects Include="104Sydney\DelphiVersionsFM.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="104Sydney\DelphiVersionsMobile.dproj">
+        <Projects Include="HeaderFooterNavigation.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -50,23 +50,23 @@
     <Target Name="DelphiVersionsFM:Make">
         <MSBuild Projects="104Sydney\DelphiVersionsFM.dproj" Targets="Make"/>
     </Target>
-    <Target Name="DelphiVersionsMobile">
-        <MSBuild Projects="104Sydney\DelphiVersionsMobile.dproj"/>
+    <Target Name="HeaderFooterNavigation">
+        <MSBuild Projects="HeaderFooterNavigation.dproj"/>
     </Target>
-    <Target Name="DelphiVersionsMobile:Clean">
-        <MSBuild Projects="104Sydney\DelphiVersionsMobile.dproj" Targets="Clean"/>
+    <Target Name="HeaderFooterNavigation:Clean">
+        <MSBuild Projects="HeaderFooterNavigation.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="DelphiVersionsMobile:Make">
-        <MSBuild Projects="104Sydney\DelphiVersionsMobile.dproj" Targets="Make"/>
+    <Target Name="HeaderFooterNavigation:Make">
+        <MSBuild Projects="HeaderFooterNavigation.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="DelphiVersionsConsole;DelphiVersionsVCL;DelphiVersionsFM;DelphiVersionsMobile"/>
+        <CallTarget Targets="DelphiVersionsConsole;DelphiVersionsVCL;DelphiVersionsFM;HeaderFooterNavigation"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="DelphiVersionsConsole:Clean;DelphiVersionsVCL:Clean;DelphiVersionsFM:Clean;DelphiVersionsMobile:Clean"/>
+        <CallTarget Targets="DelphiVersionsConsole:Clean;DelphiVersionsVCL:Clean;DelphiVersionsFM:Clean;HeaderFooterNavigation:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="DelphiVersionsConsole:Make;DelphiVersionsVCL:Make;DelphiVersionsFM:Make;DelphiVersionsMobile:Make"/>
+        <CallTarget Targets="DelphiVersionsConsole:Make;DelphiVersionsVCL:Make;DelphiVersionsFM:Make;HeaderFooterNavigation:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
