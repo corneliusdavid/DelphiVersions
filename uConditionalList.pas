@@ -87,6 +87,10 @@ const
   D104_IntroLink1 = 'http://docwiki.embarcadero.com/RADStudio/Sydney/en/Conditional_compilation_(Delphi)';
   D104_IntroLink2 = 'http://docwiki.embarcadero.com/RADStudio/Sydney/en/Delphi_compiler_directives';
   D104_DirectivesList = 'http://docwiki.embarcadero.com/RADStudio/Sydney/en/Delphi_Compiler_Directives_(List)_Index';
+
+  D11_IntroLink1 = 'https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Conditional_compilation_(Delphi)';
+  D11_IntroLink2 = 'https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Delphi_compiler_directives';
+  D11_DirectivesList = 'https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Delphi_Compiler_Directives_(List)_Index';
 begin
   {$IFDEF VER210}   IntroLink1 := D2010_IntroLink1; IntroLink2 := D2010_IntroLink2; DirectivesLink := D2010_DirectivesList; {$ENDIF}
   {$IFDEF VER220}   IntroLink1 := DXE_IntroLink1; IntroLink2 := DXE_IntroLink2;  DirectivesLink := DXE_DirectivesList; {$ENDIF}
@@ -102,6 +106,7 @@ begin
   {$IFDEF VER320}   IntroLink1 := D102_IntroLink1; IntroLink2 := D102_IntroLink2; DirectivesLink := D102_DirectivesList; {$ENDIF}
   {$IFDEF VER330}   IntroLink1 := D103_IntroLink1; IntroLink2 := D103_IntroLink2; DirectivesLink := D103_DirectivesList; {$ENDIF}
   {$IFDEF VER340}   IntroLink1 := D104_IntroLink1; IntroLink2 := D104_IntroLink2; DirectivesLink := D104_DirectivesList; {$ENDIF}
+  {$IFDEF VER350}   IntroLink1 := D11_IntroLink1; IntroLink2 := D11_IntroLink2; DirectivesLink := D11_DirectivesList; {$ENDIF}
 end;
 
 procedure GetConditionalDefines(GetCondDefProc: TGetConditionalDefine);
@@ -186,6 +191,7 @@ begin
   {$IFDEF VER320}   GetCondDefProc('VER320: Delphi 10.2 Tokyo (ver 25), package version 250');  {$ENDIF}
   {$IFDEF VER330}   GetCondDefProc('VER330: Delphi 10.3 Rio (ver 26), package version 260');  {$ENDIF}
   {$IFDEF VER340}   GetCondDefProc('VER340: Delphi 10.4 Sydney (ver 27), package version 270');  {$ENDIF}
+  {$IFDEF VER350}   GetCondDefProc('VER350: Delphi 11 Alexandria (ver 28), package version 280');  {$ENDIF}
 end;
 
 end.
