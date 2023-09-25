@@ -61,9 +61,16 @@
         <DCC_DependencyCheckOutputName>DelphiVersions.exe</DCC_DependencyCheckOutputName>
         <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
-        <Custom_Styles>CopperDark|VCLSTYLE|$(BDSCOMMONDIR)\Styles\CopperDark.vsf</Custom_Styles>
-        <PreBuildEvent><![CDATA[copy "$(PROJECTDIR)\..\CopperDark.vsf" "$(OUTPUTDIR)"
+        <Custom_Styles>&quot;Aqua Light Slate|VCLSTYLE|$(BDSCOMMONDIR)\Styles\AquaLightSlate.vsf&quot;;Glow|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Glow.vsf</Custom_Styles>
+        <PreBuildEvent><![CDATA[copy "$(BDSCOMMONDIR)\Styles\Glow.vsf" "$(PROJECTDIR)"
+copy "$(PROJECTDIR)\Glow.vsf" "$(OUTPUTDIR)"
 $(PreBuildEvent)]]></PreBuildEvent>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
         <Version>7.0</Version>
