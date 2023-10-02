@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{740E2163-2FD1-46BF-BFC3-76E83E291CD5}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="104Sydney\DelphiVersionsConsole.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="104Sydney\DelphiVersionsVCL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="104Sydney\DelphiVersionsFM.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="HeaderFooterNavigation.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DelphiVersionsConsole">
+        <MSBuild Projects="104Sydney\DelphiVersionsConsole.dproj"/>
+    </Target>
+    <Target Name="DelphiVersionsConsole:Clean">
+        <MSBuild Projects="104Sydney\DelphiVersionsConsole.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiVersionsConsole:Make">
+        <MSBuild Projects="104Sydney\DelphiVersionsConsole.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DelphiVersionsVCL">
+        <MSBuild Projects="104Sydney\DelphiVersionsVCL.dproj"/>
+    </Target>
+    <Target Name="DelphiVersionsVCL:Clean">
+        <MSBuild Projects="104Sydney\DelphiVersionsVCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiVersionsVCL:Make">
+        <MSBuild Projects="104Sydney\DelphiVersionsVCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DelphiVersionsFM">
+        <MSBuild Projects="104Sydney\DelphiVersionsFM.dproj"/>
+    </Target>
+    <Target Name="DelphiVersionsFM:Clean">
+        <MSBuild Projects="104Sydney\DelphiVersionsFM.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiVersionsFM:Make">
+        <MSBuild Projects="104Sydney\DelphiVersionsFM.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HeaderFooterNavigation">
+        <MSBuild Projects="HeaderFooterNavigation.dproj"/>
+    </Target>
+    <Target Name="HeaderFooterNavigation:Clean">
+        <MSBuild Projects="HeaderFooterNavigation.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HeaderFooterNavigation:Make">
+        <MSBuild Projects="HeaderFooterNavigation.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DelphiVersionsConsole;DelphiVersionsVCL;DelphiVersionsFM;HeaderFooterNavigation"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DelphiVersionsConsole:Clean;DelphiVersionsVCL:Clean;DelphiVersionsFM:Clean;HeaderFooterNavigation:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DelphiVersionsConsole:Make;DelphiVersionsVCL:Make;DelphiVersionsFM:Make;HeaderFooterNavigation:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

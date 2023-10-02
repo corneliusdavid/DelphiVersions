@@ -1,0 +1,176 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D3C3F9CC-F859-44A7-BD51-04E1DE06E792}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="11Alexandria\DelphiVersionsConsole.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="11Alexandria\DelphiVersionsVCL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="11Alexandria\DelphiVersionsFM.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="11Alexandria\DelphiVersionsMobile.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DelphiVersionsConsole">
+        <MSBuild Projects="11Alexandria\DelphiVersionsConsole.dproj"/>
+    </Target>
+    <Target Name="DelphiVersionsConsole:Clean">
+        <MSBuild Projects="11Alexandria\DelphiVersionsConsole.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiVersionsConsole:Make">
+        <MSBuild Projects="11Alexandria\DelphiVersionsConsole.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DelphiVersionsVCL">
+        <MSBuild Projects="11Alexandria\DelphiVersionsVCL.dproj"/>
+    </Target>
+    <Target Name="DelphiVersionsVCL:Clean">
+        <MSBuild Projects="11Alexandria\DelphiVersionsVCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiVersionsVCL:Make">
+        <MSBuild Projects="11Alexandria\DelphiVersionsVCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DelphiVersionsFM">
+        <MSBuild Projects="11Alexandria\DelphiVersionsFM.dproj"/>
+    </Target>
+    <Target Name="DelphiVersionsFM:Clean">
+        <MSBuild Projects="11Alexandria\DelphiVersionsFM.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiVersionsFM:Make">
+        <MSBuild Projects="11Alexandria\DelphiVersionsFM.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DelphiVersionsMobile">
+        <MSBuild Projects="11Alexandria\DelphiVersionsMobile.dproj"/>
+    </Target>
+    <Target Name="DelphiVersionsMobile:Clean">
+        <MSBuild Projects="11Alexandria\DelphiVersionsMobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiVersionsMobile:Make">
+        <MSBuild Projects="11Alexandria\DelphiVersionsMobile.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DelphiVersionsConsole;DelphiVersionsVCL;DelphiVersionsFM;DelphiVersionsMobile"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DelphiVersionsConsole:Clean;DelphiVersionsVCL:Clean;DelphiVersionsFM:Clean;DelphiVersionsMobile:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DelphiVersionsConsole:Make;DelphiVersionsVCL:Make;DelphiVersionsFM:Make;DelphiVersionsMobile:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+    <ItemGroup Condition="'$(BuildGroup)'=='Build for Windows'">
+        <BuildGroupProject Include="11Alexandria\DelphiVersionsConsole.dproj">
+            <ProjectGuid>{DE487856-A0D6-41E9-A585-8557A4731C2F}</ProjectGuid>
+            <Configurations>Debug</Configurations>
+            <Platforms>Win32;Win64</Platforms>
+            <Enabled>True</Enabled>
+        </BuildGroupProject>
+        <BuildGroupProject Include="11Alexandria\DelphiVersionsVCL.dproj">
+            <ProjectGuid>{A7043625-C3CF-4DEF-A6F0-A5966E41E8D7}</ProjectGuid>
+            <Configurations>Debug</Configurations>
+            <Platforms>Win32;Win64</Platforms>
+            <Enabled>True</Enabled>
+        </BuildGroupProject>
+        <BuildGroupProject Include="11Alexandria\DelphiVersionsFM.dproj">
+            <ProjectGuid>{A6B6C774-93EB-4906-87AB-2E378F6BEFE8}</ProjectGuid>
+            <Configurations>Debug</Configurations>
+            <Platforms>Win32;Win64</Platforms>
+            <Enabled>True</Enabled>
+        </BuildGroupProject>
+        <BuildGroupProject Include="11Alexandria\DelphiVersionsMobile.dproj">
+            <ProjectGuid>{0E13DBB1-67D2-4E8A-9130-0BA3E3ACE037}</ProjectGuid>
+            <Configurations>Release</Configurations>
+            <Platforms>Android64</Platforms>
+            <Enabled>False</Enabled>
+        </BuildGroupProject>
+    </ItemGroup>
+    <ItemGroup Condition="'$(BuildGroup)'=='Build for MacOS'">
+        <BuildGroupProject Include="11Alexandria\DelphiVersionsConsole.dproj">
+            <ProjectGuid>{DE487856-A0D6-41E9-A585-8557A4731C2F}</ProjectGuid>
+            <Configurations>Debug</Configurations>
+            <Platforms>OSX64</Platforms>
+            <Enabled>True</Enabled>
+        </BuildGroupProject>
+        <BuildGroupProject Include="11Alexandria\DelphiVersionsVCL.dproj">
+            <ProjectGuid>{A7043625-C3CF-4DEF-A6F0-A5966E41E8D7}</ProjectGuid>
+            <Configurations>Debug</Configurations>
+            <Platforms>Win32</Platforms>
+            <Enabled>False</Enabled>
+        </BuildGroupProject>
+        <BuildGroupProject Include="11Alexandria\DelphiVersionsFM.dproj">
+            <ProjectGuid>{A6B6C774-93EB-4906-87AB-2E378F6BEFE8}</ProjectGuid>
+            <Configurations>Debug</Configurations>
+            <Platforms>OSX64</Platforms>
+            <Enabled>True</Enabled>
+        </BuildGroupProject>
+        <BuildGroupProject Include="11Alexandria\DelphiVersionsMobile.dproj">
+            <ProjectGuid>{0E13DBB1-67D2-4E8A-9130-0BA3E3ACE037}</ProjectGuid>
+            <Configurations>Release</Configurations>
+            <Platforms>Android64</Platforms>
+            <Enabled>False</Enabled>
+        </BuildGroupProject>
+    </ItemGroup>
+    <ItemGroup Condition="'$(BuildGroup)'=='Build for Android'">
+        <BuildGroupProject Include="11Alexandria\DelphiVersionsConsole.dproj">
+            <ProjectGuid>{DE487856-A0D6-41E9-A585-8557A4731C2F}</ProjectGuid>
+            <Configurations>Debug</Configurations>
+            <Platforms>Linux64</Platforms>
+            <Enabled>False</Enabled>
+        </BuildGroupProject>
+        <BuildGroupProject Include="11Alexandria\DelphiVersionsVCL.dproj">
+            <ProjectGuid>{A7043625-C3CF-4DEF-A6F0-A5966E41E8D7}</ProjectGuid>
+            <Configurations>Debug</Configurations>
+            <Platforms>Win32</Platforms>
+            <Enabled>False</Enabled>
+        </BuildGroupProject>
+        <BuildGroupProject Include="11Alexandria\DelphiVersionsFM.dproj">
+            <ProjectGuid>{A6B6C774-93EB-4906-87AB-2E378F6BEFE8}</ProjectGuid>
+            <Configurations>Debug</Configurations>
+            <Platforms>OSX64</Platforms>
+            <Enabled>False</Enabled>
+        </BuildGroupProject>
+        <BuildGroupProject Include="11Alexandria\DelphiVersionsMobile.dproj">
+            <ProjectGuid>{0E13DBB1-67D2-4E8A-9130-0BA3E3ACE037}</ProjectGuid>
+            <Configurations>Release</Configurations>
+            <Platforms>Android64</Platforms>
+            <Enabled>False</Enabled>
+        </BuildGroupProject>
+    </ItemGroup>
+    <ItemGroup Condition="'$(BuildGroup)'=='Build for iOS'">
+        <BuildGroupProject Include="11Alexandria\DelphiVersionsConsole.dproj">
+            <ProjectGuid>{DE487856-A0D6-41E9-A585-8557A4731C2F}</ProjectGuid>
+            <Configurations>Debug</Configurations>
+            <Platforms>Linux64</Platforms>
+            <Enabled>False</Enabled>
+        </BuildGroupProject>
+        <BuildGroupProject Include="11Alexandria\DelphiVersionsVCL.dproj">
+            <ProjectGuid>{A7043625-C3CF-4DEF-A6F0-A5966E41E8D7}</ProjectGuid>
+            <Configurations>Debug</Configurations>
+            <Platforms>Win32</Platforms>
+            <Enabled>False</Enabled>
+        </BuildGroupProject>
+        <BuildGroupProject Include="11Alexandria\DelphiVersionsFM.dproj">
+            <ProjectGuid>{A6B6C774-93EB-4906-87AB-2E378F6BEFE8}</ProjectGuid>
+            <Configurations>Debug</Configurations>
+            <Platforms>OSX64</Platforms>
+            <Enabled>False</Enabled>
+        </BuildGroupProject>
+        <BuildGroupProject Include="11Alexandria\DelphiVersionsMobile.dproj">
+            <ProjectGuid>{0E13DBB1-67D2-4E8A-9130-0BA3E3ACE037}</ProjectGuid>
+            <Configurations>Release</Configurations>
+            <Platforms>Android64</Platforms>
+            <Enabled>False</Enabled>
+        </BuildGroupProject>
+    </ItemGroup>
+</Project>

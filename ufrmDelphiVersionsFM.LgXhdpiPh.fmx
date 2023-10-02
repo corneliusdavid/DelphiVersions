@@ -23,9 +23,9 @@ inherited frmDelphiVersionsFM_LgXhdpiPh: TfrmDelphiVersionsFM_LgXhdpiPh
   end
   inherited lbDefines: TListBox
     Size.Width = 450.000000000000000000
-    Size.Height = 490.000000000000000000
+    Size.Height = 514.000000000000000000
     Viewport.Width = 450.000000000000000000
-    Viewport.Height = 490.000000000000000000
+    Viewport.Height = 514.000000000000000000
   end
   inherited pnlBottom: TPanel
     Position.Y = 581.000000000000000000
@@ -58,5 +58,10 @@ inherited frmDelphiVersionsFM_LgXhdpiPh: TfrmDelphiVersionsFM_LgXhdpiPh
       TextSettings.Font.StyleExt = {04040000000000000004000000}
       Size.Height = 32.000000000000000000
     end
+  end
+  inherited StyleBookUbuntu: TStyleBook
+    Styles = <
+      item
+      end>
   end
 end

@@ -27,6 +27,7 @@ type
     edtClassLink: TEdit;
     edtDirectivesLink: TEdit;
     edtVersionsLink: TEdit;
+    StyleBookUbuntu: TStyleBook;
     procedure ToolbarCloseButtonClick(Sender: TObject);
     procedure FormGesture(Sender: TObject;
       const EventInfo: TGestureEventInfo; var Handled: Boolean);
@@ -49,6 +50,8 @@ implementation
 
 {$R *.fmx}
 {$R *.LgXhdpiPh.fmx ANDROID}
+{$R *.Macintosh.fmx MACOS}
+{$R *.Windows.fmx MSWINDOWS}
 
 uses
   uConditionalList, uOpenViewURL;

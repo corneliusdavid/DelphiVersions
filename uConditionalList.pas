@@ -17,7 +17,7 @@ const
               'Try compiling under different versions or platforms to see the differences.';
 
   // this should always point to the most recent list of compiler version directives
-  VersionsLink = 'http://docwiki.embarcadero.com/RADStudio/Sydney/en/Compiler_Versions';
+  VersionsLink = 'https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Compiler_Versions';
 
   // if all else failes, show this link
   OldDocLink = 'http://docs.embarcadero.com/products/rad_studio';
@@ -88,9 +88,9 @@ const
   D104_IntroLink2 = 'http://docwiki.embarcadero.com/RADStudio/Sydney/en/Delphi_compiler_directives';
   D104_DirectivesList = 'http://docwiki.embarcadero.com/RADStudio/Sydney/en/Delphi_Compiler_Directives_(List)_Index';
 
-  D11_IntroLink1 = 'https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Conditional_compilation_(Delphi)';
-  D11_IntroLink2 = 'https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Delphi_compiler_directives';
-  D11_DirectivesList = 'https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Delphi_Compiler_Directives_(List)_Index';
+  D110_IntroLink1 = 'https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Conditional_compilation_(Delphi)';
+  D110_IntroLink2 = 'https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Delphi_compiler_directives';
+  D110_DirectivesList = 'https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Delphi_Compiler_Directives_(List)_Index';
 begin
   {$IFDEF VER210}   IntroLink1 := D2010_IntroLink1; IntroLink2 := D2010_IntroLink2; DirectivesLink := D2010_DirectivesList; {$ENDIF}
   {$IFDEF VER220}   IntroLink1 := DXE_IntroLink1; IntroLink2 := DXE_IntroLink2;  DirectivesLink := DXE_DirectivesList; {$ENDIF}
@@ -106,7 +106,7 @@ begin
   {$IFDEF VER320}   IntroLink1 := D102_IntroLink1; IntroLink2 := D102_IntroLink2; DirectivesLink := D102_DirectivesList; {$ENDIF}
   {$IFDEF VER330}   IntroLink1 := D103_IntroLink1; IntroLink2 := D103_IntroLink2; DirectivesLink := D103_DirectivesList; {$ENDIF}
   {$IFDEF VER340}   IntroLink1 := D104_IntroLink1; IntroLink2 := D104_IntroLink2; DirectivesLink := D104_DirectivesList; {$ENDIF}
-  {$IFDEF VER350}   IntroLink1 := D11_IntroLink1; IntroLink2 := D11_IntroLink2; DirectivesLink := D11_DirectivesList; {$ENDIF}
+  {$IFDEF VER350}   IntroLink1 := D110_IntroLink1; IntroLink2 := D110_IntroLink2; DirectivesLink := D110_DirectivesList; {$ENDIF}
 end;
 
 procedure GetConditionalDefines(GetCondDefProc: TGetConditionalDefine);
@@ -122,6 +122,8 @@ begin
   {$IFDEF IOS32}      GetCondDefProc('IOS32');                {$ENDIF}
   {$IFDEF IOS64}      GetCondDefProc('IOS64');                {$ENDIF}
   {$IFDEF NATIVECODE} GetCondDefProc('NATIVECODE');           {$ENDIF}
+  {$IFDEF OSX}        GetCondDefProc('OSX');                  {$ENDIF}
+  {$IFDEF OSX64}      GetCondDefProc('OSX64');                {$ENDIF}
   {$IFDEF MACOS}      GetCondDefProc('MACOS');                {$ENDIF}
   {$IFDEF MACOS32}    GetCondDefProc('MACOS32');              {$ENDIF}
   {$IFDEF MACOS64}    GetCondDefProc('MACOS64');              {$ENDIF}
@@ -135,6 +137,7 @@ begin
   // cpu
   {$IFDEF CPU386}     GetCondDefProc('CPU386');               {$ENDIF}
   {$IFDEF CPUARM}     GetCondDefProc('CPUARM');               {$ENDIF}
+  {$IFDEF CPUARM32}   GetCondDefProc('CPUARM32');             {$ENDIF}
   {$IFDEF CPUARM64}   GetCondDefProc('CPUARM64');             {$ENDIF}
   {$IFDEF CPUX86}     GetCondDefProc('CPUX86');               {$ENDIF}
   {$IFDEF CPUX64}     GetCondDefProc('CPUX64');               {$ENDIF}
@@ -191,7 +194,7 @@ begin
   {$IFDEF VER320}   GetCondDefProc('VER320: Delphi 10.2 Tokyo (ver 25), package version 250');  {$ENDIF}
   {$IFDEF VER330}   GetCondDefProc('VER330: Delphi 10.3 Rio (ver 26), package version 260');  {$ENDIF}
   {$IFDEF VER340}   GetCondDefProc('VER340: Delphi 10.4 Sydney (ver 27), package version 270');  {$ENDIF}
-  {$IFDEF VER350}   GetCondDefProc('VER350: Delphi 11 Alexandria (ver 28), package version 280');  {$ENDIF}
+  {$IFDEF VER350}   GetCondDefProc('VER350: Delphi 11.0 Alexandria (ver 28), package version 280');  {$ENDIF}
 end;
 
 end.
