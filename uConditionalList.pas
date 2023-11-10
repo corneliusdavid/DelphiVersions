@@ -111,6 +111,16 @@ end;
 
 procedure GetConditionalDefines(GetCondDefProc: TGetConditionalDefine);
 begin
+  // cpu
+  {$IFDEF CPU386}     GetCondDefProc('CPU386');               {$ENDIF}
+  {$IFDEF CPUARM}     GetCondDefProc('CPUARM');               {$ENDIF}
+  {$IFDEF CPUARM32}   GetCondDefProc('CPUARM32');             {$ENDIF}
+  {$IFDEF CPUARM64}   GetCondDefProc('CPUARM64');             {$ENDIF}
+  {$IFDEF CPUX86}     GetCondDefProc('CPUX86');               {$ENDIF}
+  {$IFDEF CPUX64}     GetCondDefProc('CPUX64');               {$ENDIF}
+  {$IFDEF CPU32BITS}  GetCondDefProc('CPU32BITS');            {$ENDIF}
+  {$IFDEF CPU64BITS}  GetCondDefProc('CPU64BITS');            {$ENDIF}
+
   // platform
   {$IFDEF LINUX}      GetCondDefProc('LINUX');                {$ENDIF}
   {$IFDEF LINUX32}    GetCondDefProc('LINUX32');              {$ENDIF}
@@ -134,15 +144,9 @@ begin
   {$IFDEF ANDROID32}  GetCondDefProc('ANDROID32');            {$ENDIF}
   {$IFDEF ANDROID64}  GetCondDefProc('ANDROID64');            {$ENDIF}
 
-  // cpu
-  {$IFDEF CPU386}     GetCondDefProc('CPU386');               {$ENDIF}
-  {$IFDEF CPUARM}     GetCondDefProc('CPUARM');               {$ENDIF}
-  {$IFDEF CPUARM32}   GetCondDefProc('CPUARM32');             {$ENDIF}
-  {$IFDEF CPUARM64}   GetCondDefProc('CPUARM64');             {$ENDIF}
-  {$IFDEF CPUX86}     GetCondDefProc('CPUX86');               {$ENDIF}
-  {$IFDEF CPUX64}     GetCondDefProc('CPUX64');               {$ENDIF}
-  {$IFDEF CPU32BITS}  GetCondDefProc('CPU32BITS');            {$ENDIF}
-  {$IFDEF CPU64BITS}  GetCondDefProc('CPU64BITS');            {$ENDIF}
+  // framework
+  {$IFDEF FRAMEWORK_VCL} GetCondDefProc('FRAMEWORK_VCL');     {$ENDIF}
+  {$IFDEF FRAMEWORK_FMX} GetCondDefProc('FRAMEWORK_FMX');     {$ENDIF}
 
   // application type
   {$IFDEF CONSOLE}    GetCondDefProc('CONSOLE');              {$ENDIF}
