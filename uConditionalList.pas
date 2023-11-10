@@ -17,7 +17,7 @@ const
               'Try compiling under different versions or platforms to see the differences.';
 
   // this should always point to the most recent list of compiler version directives
-  VersionsLink = 'https://docwiki.embarcadero.com/RADStudio/Yukon/en/Compiler_Versions';
+  VersionsLink = 'https://docwiki.embarcadero.com/RADStudio/Athens/en/Compiler_Versions';
 
   // if all else failes, show this link
   OldDocLink = 'http://docs.embarcadero.com/products/rad_studio';
