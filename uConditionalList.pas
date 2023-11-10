@@ -92,9 +92,9 @@ const
   D110_IntroLink2 = 'https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Delphi_compiler_directives';
   D110_DirectivesList = 'https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Delphi_Compiler_Directives_(List)_Index';
 
-  D120_IntroLink1 = 'https://docwiki.embarcadero.com/RADStudio/Yukon/en/Conditional_compilation_(Delphi)';
-  D120_IntroLink2 = 'https://docwiki.embarcadero.com/RADStudio/Yukon/en/Delphi_compiler_directives';
-  D120_DirectivesList = 'https://docwiki.embarcadero.com/RADStudio/Yukon/en/Delphi_Compiler_Directives_(List)_Index';
+  D120_IntroLink1 = 'https://docwiki.embarcadero.com/RADStudio/Athens/en/Conditional_compilation_(Delphi)';
+  D120_IntroLink2 = 'https://docwiki.embarcadero.com/RADStudio/Athens/en/Delphi_compiler_directives';
+  D120_DirectivesList = 'https://docwiki.embarcadero.com/RADStudio/Athens/en/Delphi_Compiler_Directives_(List)_Index';
 begin
   {$IFDEF VER210}   IntroLink1 := D2010_IntroLink1; IntroLink2 := D2010_IntroLink2; DirectivesLink := D2010_DirectivesList; {$ENDIF}
   {$IFDEF VER220}   IntroLink1 := DXE_IntroLink1; IntroLink2 := DXE_IntroLink2;  DirectivesLink := DXE_DirectivesList; {$ENDIF}
