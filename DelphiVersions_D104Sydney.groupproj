@@ -12,9 +12,6 @@
         <Projects Include="104Sydney\DelphiVersionsFM.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="HeaderFooterNavigation.dproj">
-            <Dependencies/>
-        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -50,23 +47,14 @@
     <Target Name="DelphiVersionsFM:Make">
         <MSBuild Projects="104Sydney\DelphiVersionsFM.dproj" Targets="Make"/>
     </Target>
-    <Target Name="HeaderFooterNavigation">
-        <MSBuild Projects="HeaderFooterNavigation.dproj"/>
-    </Target>
-    <Target Name="HeaderFooterNavigation:Clean">
-        <MSBuild Projects="HeaderFooterNavigation.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="HeaderFooterNavigation:Make">
-        <MSBuild Projects="HeaderFooterNavigation.dproj" Targets="Make"/>
-    </Target>
     <Target Name="Build">
-        <CallTarget Targets="DelphiVersionsConsole;DelphiVersionsVCL;DelphiVersionsFM;HeaderFooterNavigation"/>
+        <CallTarget Targets="DelphiVersionsConsole;DelphiVersionsVCL;DelphiVersionsFM"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="DelphiVersionsConsole:Clean;DelphiVersionsVCL:Clean;DelphiVersionsFM:Clean;HeaderFooterNavigation:Clean"/>
+        <CallTarget Targets="DelphiVersionsConsole:Clean;DelphiVersionsVCL:Clean;DelphiVersionsFM:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="DelphiVersionsConsole:Make;DelphiVersionsVCL:Make;DelphiVersionsFM:Make;HeaderFooterNavigation:Make"/>
+        <CallTarget Targets="DelphiVersionsConsole:Make;DelphiVersionsVCL:Make;DelphiVersionsFM:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
