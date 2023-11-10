@@ -6,7 +6,8 @@ uses
   Forms,
   uConditionalList in '..\uConditionalList.pas',
   ufrmDelphiVersions in '..\ufrmDelphiVersions.pas' {frmDelphiVersions},
-  System.SysUtils, System.IOUtils,
+  System.SysUtils,
+  System.IOUtils,
   Vcl.Themes,
   Vcl.Styles;
 
