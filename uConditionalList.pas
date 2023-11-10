@@ -17,7 +17,7 @@ const
               'Try compiling under different versions or platforms to see the differences.';
 
   // this should always point to the most recent list of compiler version directives
-  VersionsLink = 'https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Compiler_Versions';
+  VersionsLink = 'https://docwiki.embarcadero.com/RADStudio/Yukon/en/Compiler_Versions';
 
   // if all else failes, show this link
   OldDocLink = 'http://docs.embarcadero.com/products/rad_studio';
@@ -91,6 +91,10 @@ const
   D110_IntroLink1 = 'https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Conditional_compilation_(Delphi)';
   D110_IntroLink2 = 'https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Delphi_compiler_directives';
   D110_DirectivesList = 'https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Delphi_Compiler_Directives_(List)_Index';
+
+  D120_IntroLink1 = 'https://docwiki.embarcadero.com/RADStudio/Yukon/en/Conditional_compilation_(Delphi)';
+  D120_IntroLink2 = 'https://docwiki.embarcadero.com/RADStudio/Yukon/en/Delphi_compiler_directives';
+  D120_DirectivesList = 'https://docwiki.embarcadero.com/RADStudio/Yukon/en/Delphi_Compiler_Directives_(List)_Index';
 begin
   {$IFDEF VER210}   IntroLink1 := D2010_IntroLink1; IntroLink2 := D2010_IntroLink2; DirectivesLink := D2010_DirectivesList; {$ENDIF}
   {$IFDEF VER220}   IntroLink1 := DXE_IntroLink1; IntroLink2 := DXE_IntroLink2;  DirectivesLink := DXE_DirectivesList; {$ENDIF}
@@ -107,6 +111,7 @@ begin
   {$IFDEF VER330}   IntroLink1 := D103_IntroLink1; IntroLink2 := D103_IntroLink2; DirectivesLink := D103_DirectivesList; {$ENDIF}
   {$IFDEF VER340}   IntroLink1 := D104_IntroLink1; IntroLink2 := D104_IntroLink2; DirectivesLink := D104_DirectivesList; {$ENDIF}
   {$IFDEF VER350}   IntroLink1 := D110_IntroLink1; IntroLink2 := D110_IntroLink2; DirectivesLink := D110_DirectivesList; {$ENDIF}
+  {$IFDEF VER360}   IntroLink1 := D120_IntroLink1; IntroLink2 := D120_IntroLink2; DirectivesLink := D120_DirectivesList; {$ENDIF}
 end;
 
 procedure GetConditionalDefines(GetCondDefProc: TGetConditionalDefine);
@@ -199,6 +204,7 @@ begin
   {$IFDEF VER330}   GetCondDefProc('VER330: Delphi 10.3 Rio (ver 26), package version 260');  {$ENDIF}
   {$IFDEF VER340}   GetCondDefProc('VER340: Delphi 10.4 Sydney (ver 27), package version 270');  {$ENDIF}
   {$IFDEF VER350}   GetCondDefProc('VER350: Delphi 11.0 Alexandria (ver 28), package version 280');  {$ENDIF}
+  {$IFDEF VER360}   GetCondDefProc('VER360: Delphi 12.0 Yukon (ver 29), package version 290');  {$ENDIF}
 end;
 
 end.
