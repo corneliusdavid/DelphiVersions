@@ -21,3 +21,11 @@ Android64/
 *.res
 11Alexandria/iOSDevice64/
 11Alexandria/LaunchScreen.TemplateiOS/
+10Seattle/OSX32/
+104Sydney/OSX32/
+104Sydney/LaunchScreen.TemplateiOS/
+104Sydney/iOSDevice64/
+103Rio/OSX32/
+101Berlin/OSX32/
+*.optset
+*.2007
