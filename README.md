@@ -1,7 +1,7 @@
 DelphiVersions
 ==============
 
-Small suite of simple Delphi Windows applications that can be compiled in different versions and platforms and which displays text based on compiler directives defined by the compiler.
+Small suite of simple Delphi cross-platform applications that can be compiled in different versions and platforms and which displays text based on compiler directives defined by the compiler.
 
 Read this [blog entry](https://corneliusconcepts.tech/programming-delphi-various-platforms-and-versions) for more information.
 
@@ -15,8 +15,8 @@ There's also a Windows Console app in the group and that one compiled as a 64-bi
 
 A desktop FireMonkey app was created and looks like this on a Mac:
 
-![](https://corneliusconcepts.tech/sites/default/files/104Sydney-FireMonkey-MacOS64-Debug_0.png)
+![](https://corneliusconcepts.tech/sites/default/files/Delphi12-FireMonkey-MacOS64.png)
 
-Finally, an Android version was added and looks like this:
+Finally, both iOS and Android phone versions were added; an old version of the Android one looks like this:
 
 ![](https://corneliusconcepts.tech/sites/default/files/AndroidPhone2.jpg)
