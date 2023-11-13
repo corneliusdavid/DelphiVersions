@@ -21,3 +21,9 @@ Android64/
 *.res
 11Alexandria/iOSDevice64/
 11Alexandria/LaunchScreen.TemplateiOS/
+*.dsk
+104Sydney/DelphiVersionsMobile/
+*.so
+*.o
+*.dex
+*.dres
