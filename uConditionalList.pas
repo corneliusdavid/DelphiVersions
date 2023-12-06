@@ -30,6 +30,9 @@ var
 
 implementation
 
+uses
+  System.SysUtils;
+
 procedure SetupReferenceLinks;
 const
   D2010_IntroLink1 = 'http://docwiki.embarcadero.com/RADStudio/2010/en/Conditional_Compilation';
@@ -205,6 +208,17 @@ begin
   {$IFDEF VER340}   GetCondDefProc('VER340: Delphi 10.4 Sydney (ver 27), package version 270');  {$ENDIF}
   {$IFDEF VER350}   GetCondDefProc('VER350: Delphi 11.0 Alexandria (ver 28), package version 280');  {$ENDIF}
   {$IFDEF VER360}   GetCondDefProc('VER360: Delphi 12.0 Yukon (ver 29), package version 290');  {$ENDIF}
+
+  {$IFDEF CONDITIONALEXPRESSIONS}
+    {$IF CompilerVersion >= 29.0}
+    var Ver: Word;
+    Ver := GetCompilerVersion;
+    GetCondDefProc(Format('GetCompilerVersion = $%x (%d.%d)', [Ver, Ver shr 8, Ver and $00FF]));
+    Ver := GetRTLVersion;
+    GetCondDefProc(Format('GetRTLVersion = $%x (%d.%d)', [Ver, Ver shr 8, Ver and $00FF]));
+    {$ENDIF}
+  {$ENDIF}
+
 end;
 
 end.
