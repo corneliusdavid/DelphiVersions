@@ -207,7 +207,7 @@ begin
   {$IFDEF VER330}   GetCondDefProc('VER330: Delphi 10.3 Rio (ver 26), package version 260');  {$ENDIF}
   {$IFDEF VER340}   GetCondDefProc('VER340: Delphi 10.4 Sydney (ver 27), package version 270');  {$ENDIF}
   {$IFDEF VER350}   GetCondDefProc('VER350: Delphi 11.0 Alexandria (ver 28), package version 280');  {$ENDIF}
-  {$IFDEF VER360}   GetCondDefProc('VER360: Delphi 12.0 Yukon (ver 29), package version 290');  {$ENDIF}
+  {$IFDEF VER360}   GetCondDefProc('VER360: Delphi 12.0 Athens (ver 29), package version 290');  {$ENDIF}
 
   {$IFDEF CONDITIONALEXPRESSIONS}
     {$IF CompilerVersion >= 29.0}
