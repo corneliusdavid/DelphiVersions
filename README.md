@@ -15,7 +15,7 @@ There's also a Windows Console app in the group and that one compiled as a 64-bi
 
 A desktop FireMonkey app was created and looks like this on a Mac:
 
-![](https://corneliusconcepts.tech/sites/default/files/Delphi12-FireMonkey-MacOS64.png)
+![](https://corneliusconcepts.tech/sites/default/files/Delphi12-FireMonkey-MacOS64-DEBUG.png)
 
 Finally, both iOS and Android phone versions were added; an old version of the Android one looks like this:
 
