@@ -8,13 +8,22 @@
 
 - Delphi 10.3
 - Delphi 10.2
+
+![Delphi 10.1](D10.1.png)
+
 - Delphi 10
-- Delphi XE8
-- Delphi XE7
-- Delphi XE6
-- Delphi XE5
-- Delphi XE4
-- Delphi XE3
+
+![Delphi XE8](DXE8.png)
+
+![Delphi XE7](DXE7.png)
+
+![Delphi XE6](DXE6.png)
+
+![Delphi XE5](DXE5.png)
+
+![Delphi XE4](DXE4.png)
+
+![Delphi XE3](DXE3.png)
 
 ![Delphi XE2](DXE2.png)
 
@@ -29,3 +38,5 @@
 
 - Delphi 6
 - Delphi 5
+
+You can read about the history of the Borland/Embarcadero Delphi product line on [Wikipedia](https://en.wikipedia.org/wiki/History_of_Delphi_(software)).
