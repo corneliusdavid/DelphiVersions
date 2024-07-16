@@ -1,4 +1,4 @@
-# unofficial list of Delphi About Screens
+# Unofficial list of Delphi About Screens
 
 ![Delphi 12.1](D12.1.png)
 
