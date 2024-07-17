@@ -49,3 +49,8 @@ The name of this repository might have some thinking this is a list of Delphi ve
 - [Delphi 7](AboutScreens/D7.png)
 - Delphi 6
 - Delphi 5
+
+## References
+
+- [Conditional Compilation](https://docwiki.embarcadero.com/RADStudio/Athens/en/Conditional_compilation_(Delphi))
+- [Delphi Compiler Versions](https://docwiki.embarcadero.com/RADStudio/Athens/en/Compiler_Versions)
