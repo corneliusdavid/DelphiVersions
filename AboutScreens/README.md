@@ -39,6 +39,7 @@
 ![Delphi 7](D7.png)
 
 - Delphi 6
-- Delphi 5
+
+![Delphi 5](D5.png)
 
 You can read about the history of the Borland/Embarcadero Delphi product line on [Wikipedia](https://en.wikipedia.org/wiki/History_of_Delphi_(software)).
