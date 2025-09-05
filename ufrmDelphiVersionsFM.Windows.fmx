@@ -1,21 +1,55 @@
 inherited frmDelphiVersionsFM_Windows: TfrmDelphiVersionsFM_Windows
   DesignerMasterStyle = 0
+  inherited ToolbarHolder: TLayout
+    inherited ToolbarPopup: TPopup
+      inherited ToolBar1: TToolBar
+        inherited ToolbarApplyButton: TButton
+          TextSettings.FontColor = claBlack
+        end
+        inherited ToolbarCloseButton: TButton
+          TextSettings.FontColor = claBlack
+        end
+        inherited ToolbarAddButton: TButton
+          TextSettings.FontColor = claBlack
+        end
+      end
+    end
+  end
+  inherited lblIntro: TLabel
+    TextSettings.FontColor = claBlack
+  end
   inherited lbDefines: TListBox
-    Viewport.Width = 761.000000000000000000
-    Viewport.Height = 318.000000000000000000
+    Viewport.Width = 761.00000000000000000
+    Viewport.Height = 318.00000000000000000
   end
   inherited pnlBottom: TPanel
+    inherited lblRef1: TLabel
+      TextSettings.FontColor = claBlack
+    end
+    inherited lblRef2: TLabel
+      TextSettings.FontColor = claBlack
+    end
+    inherited Label1: TLabel
+      TextSettings.FontColor = claBlack
+    end
+    inherited Label2: TLabel
+      TextSettings.FontColor = claBlack
+    end
     inherited edtAboutLink: TEdit
       TextSettings.Font.StyleExt = {04040000000000000004000000}
+      TextSettings.FontColor = claBlack
     end
     inherited edtClassLink: TEdit
       TextSettings.Font.StyleExt = {04040000000000000004000000}
+      TextSettings.FontColor = claBlack
     end
     inherited edtDirectivesLink: TEdit
       TextSettings.Font.StyleExt = {04040000000000000004000000}
+      TextSettings.FontColor = claBlack
     end
     inherited edtVersionsLink: TEdit
       TextSettings.Font.StyleExt = {04040000000000000004000000}
+      TextSettings.FontColor = claBlack
     end
   end
   inherited StyleBookUbuntu: TStyleBook
