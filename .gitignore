@@ -35,3 +35,5 @@ Android64/
 104Sydney/iOSDevice64/
 11Alexandria/iOSDevice64/
 11Alexandria/LaunchScreen.TemplateiOS/
+*.dsv
+*.deployproj
