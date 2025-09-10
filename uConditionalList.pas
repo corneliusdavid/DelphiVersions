@@ -98,6 +98,10 @@ const
   D120_IntroLink1 = 'https://docwiki.embarcadero.com/RADStudio/Athens/en/Conditional_compilation_(Delphi)';
   D120_IntroLink2 = 'https://docwiki.embarcadero.com/RADStudio/Athens/en/Delphi_compiler_directives';
   D120_DirectivesList = 'https://docwiki.embarcadero.com/RADStudio/Athens/en/Delphi_Compiler_Directives_(List)_Index';
+
+  D370_IntroLink1 = 'https://docwiki.embarcadero.com/RADStudio/Florence/en/Conditional_compilation_(Delphi)';
+  D370_IntroLink2 = 'https://docwiki.embarcadero.com/RADStudio/Florence/en/Delphi_compiler_directives';
+  D370_DirectivesList = 'https://docwiki.embarcadero.com/RADStudio/Florence/en/Delphi_Compiler_Directives_(List)_Index';
 begin
   {$IFDEF VER210}   IntroLink1 := D2010_IntroLink1; IntroLink2 := D2010_IntroLink2; DirectivesLink := D2010_DirectivesList; {$ENDIF}
   {$IFDEF VER220}   IntroLink1 := DXE_IntroLink1; IntroLink2 := DXE_IntroLink2;  DirectivesLink := DXE_DirectivesList; {$ENDIF}
@@ -115,6 +119,7 @@ begin
   {$IFDEF VER340}   IntroLink1 := D104_IntroLink1; IntroLink2 := D104_IntroLink2; DirectivesLink := D104_DirectivesList; {$ENDIF}
   {$IFDEF VER350}   IntroLink1 := D110_IntroLink1; IntroLink2 := D110_IntroLink2; DirectivesLink := D110_DirectivesList; {$ENDIF}
   {$IFDEF VER360}   IntroLink1 := D120_IntroLink1; IntroLink2 := D120_IntroLink2; DirectivesLink := D120_DirectivesList; {$ENDIF}
+  {$IFDEF VER370}   IntroLink1 := D370_IntroLink1; IntroLink2 := D370_IntroLink2; DirectivesLink := D370_DirectivesList; {$ENDIF}
 end;
 
 procedure GetConditionalDefines(GetCondDefProc: TGetConditionalDefine);
@@ -208,6 +213,7 @@ begin
   {$IFDEF VER340}   GetCondDefProc('VER340: Delphi 10.4 Sydney (ver 27), package version 270');  {$ENDIF}
   {$IFDEF VER350}   GetCondDefProc('VER350: Delphi 11.0 Alexandria (ver 28), package version 280');  {$ENDIF}
   {$IFDEF VER360}   GetCondDefProc('VER360: Delphi 12.0 Athens (ver 29), package version 290');  {$ENDIF}
+  {$IFDEF VER370}   GetCondDefProc('VER370: Delphi 13.0 Florence (ver 37), package version 370');  {$ENDIF}
 
   {$IFDEF CONDITIONALEXPRESSIONS}
     {$IF CompilerVersion >= 29.0}
