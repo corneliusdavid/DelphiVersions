@@ -216,7 +216,7 @@ begin
   {$IFDEF VER370}   GetCondDefProc('VER370: Delphi 13.0 Florence (ver 37), package version 370');  {$ENDIF}
 
   {$IFDEF CONDITIONALEXPRESSIONS}
-    {$IF CompilerVersion >= 29.0}
+    {$IF CompilerVersion >= 36.0}
     var Ver: Word;
     Ver := GetCompilerVersion;
     GetCondDefProc(Format('GetCompilerVersion = $%x (%d.%d)', [Ver, Ver shr 8, Ver and $00FF]));
