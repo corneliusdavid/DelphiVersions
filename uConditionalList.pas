@@ -31,7 +31,7 @@ var
 implementation
 
 uses
-  System.SysUtils;
+  SysUtils;
 
 procedure SetupReferenceLinks;
 const
@@ -222,7 +222,7 @@ begin
     GetCondDefProc(Format('GetCompilerVersion = $%x (%d.%d)', [Ver, Ver shr 8, Ver and $00FF]));
     Ver := GetRTLVersion;
     GetCondDefProc(Format('GetRTLVersion = $%x (%d.%d)', [Ver, Ver shr 8, Ver and $00FF]));
-    {$ENDIF}
+    {$IFEND}
   {$ENDIF}
 
 end;
