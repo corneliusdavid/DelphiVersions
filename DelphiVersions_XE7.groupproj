@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{BFF74539-0A6C-4C9E-ADE0-29358DC24F41}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="XE7\DelphiVersionsConsole.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="XE7\DelphiVersionsVCL.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DelphiVersionsConsole">
+        <MSBuild Projects="XE7\DelphiVersionsConsole.dproj"/>
+    </Target>
+    <Target Name="DelphiVersionsConsole:Clean">
+        <MSBuild Projects="XE7\DelphiVersionsConsole.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiVersionsConsole:Make">
+        <MSBuild Projects="XE7\DelphiVersionsConsole.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DelphiVersionsVCL">
+        <MSBuild Projects="XE7\DelphiVersionsVCL.dproj"/>
+    </Target>
+    <Target Name="DelphiVersionsVCL:Clean">
+        <MSBuild Projects="XE7\DelphiVersionsVCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiVersionsVCL:Make">
+        <MSBuild Projects="XE7\DelphiVersionsVCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DelphiVersionsConsole;DelphiVersionsVCL"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DelphiVersionsConsole:Clean;DelphiVersionsVCL:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DelphiVersionsConsole:Make;DelphiVersionsVCL:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
