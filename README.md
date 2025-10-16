@@ -1,6 +1,10 @@
 DelphiVersions
 ==============
 
+[![Delphi](https://img.shields.io/badge/Delphi-RAD%20Studio-red.svg)](https://www.embarcadero.com/products/rad-studio)
+[![Platform](https://img.shields.io/badge/Platform-ALL-blue.svg)]()
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 *(For an unofficial list of many of the most recent Delphi versions, see the "About Screens" section below.)*
 
 This is a small suite of simple Delphi cross-platform applications that can be compiled in different versions and platforms and which displays text based on compiler directives defined by the compiler.
