@@ -1,7 +1,7 @@
 DelphiVersions
 ==============
 
-[![Delphi](https://img.shields.io/badge/Delphi-RAD%20Studio-red.svg)](https://www.embarcadero.com/products/rad-studio)
+[![Delphi](https://img.shields.io/badge/RAD%20Studio-Delphi-red.svg)](https://www.embarcadero.com/products/rad-studio)
 [![Platform](https://img.shields.io/badge/Platform-ALL-blue.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
